@@ -1,0 +1,70 @@
+@page "/register"
+@using BlazorPractice1.ApiRequests.Services
+@using static BlazorPractice1.ApiRequests.Model.Auth
+@inject AuthService AuthService
+@inject NavigationManager Navigation
+
+<div class="auth-page">
+    <div class="card auth-card">
+        <h2 class="form-title">Регистрация</h2>
+        <p class="form-subtitle">Создайте аккаунт для работы с системой</p>
+
+        @if (!string.IsNullOrWhiteSpace(errorMessage))
+        {
+            <div class="alert alert-error">@errorMessage</div>
+        }
+
+        <div class="form-group">
+            <label class="form-label">Email</label>
+            <input class="form-control" @bind="registrationRequest.Email" placeholder="Введите email" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Пароль</label>
+            <input class="form-control" @bind="registrationRequest.Password" type="password" placeholder="Введите пароль" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Имя</label>
+            <input class="form-control" @bind="registrationRequest.Name" placeholder="Введите имя" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Описание</label>
+            <input class="form-control" @bind="registrationRequest.Description" placeholder="Введите описание" />
+        </div>
+
+        <div class="form-actions">
+            <button class="btn btn-primary w-100" @onclick="RegisterMethod">Зарегистрироваться</button>
+        </div>
+    </div>
+</div>
+
+@code {
+    private RegistrationRequest registrationRequest = new RegistrationRequest();
+    private string? errorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await AuthService.LoadSessionAsync();
+
+        if (AuthService.IsAuthenticated)
+            Navigation.NavigateTo("/profile");
+    }
+
+    private async Task RegisterMethod()
+    {
+        errorMessage = null;
+
+        var succes = await AuthService.RegistrationAsync(registrationRequest);
+
+        if (succes)
+        {
+            Navigation.NavigateTo("/login");
+        }
+        else
+        {
+            errorMessage = "Не удалось зарегистрироваться";
+        }
+    }
+}

@@ -1,0 +1,327 @@
+@page "/movies"
+@using BlazorPractice1.ApiRequests.Model
+@using BlazorPractice1.ApiRequests.Services
+@inject AuthService AuthService
+@inject BlazorPractice1.ApiRequests.ApiRequest ApiRequest
+@inject NavigationManager Navigation
+
+<div class="movies-page">
+    <div class="movies-topbar">
+        <div>
+            <h2 class="movies-title">Фильмы</h2>
+            <p class="movies-subtitle">Каталог всех фильмов</p>
+        </div>
+
+        @if (AuthService.CurrentUser?.Role_Id == 1)
+        {
+            <button class="btn btn-primary" @onclick="CreateMovie">
+                + Добавить фильм
+            </button>
+        }
+    </div>
+
+    <div class="form-row" style="margin-bottom:20px;">
+        <div class="form-group">
+            <label class="form-label">Поиск</label>
+            <input class="form-control"
+                   value="@searchText"
+                   @oninput="OnSearchChanged"
+                   placeholder="Введите название фильма" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Сортировка</label>
+            <select class="form-select" @onchange="OnSortChanged">
+                <option value="name">По названию</option>
+                <option value="rating">По рейтингу</option>
+                <option value="date">По дате</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group" style="max-width:320px; margin-bottom:20px;">
+        <label class="form-label">Фильтр по жанру</label>
+        <select class="form-select" @onchange="OnGenreChanged">
+            <option value="0">Все жанры</option>
+            @foreach (var genre in genres)
+            {
+                <option value="@genre.id_Genre">@genre.name</option>
+            }
+        </select>
+    </div>
+
+    @if (!string.IsNullOrWhiteSpace(errorMessage))
+    {
+        <div class="movies-message movies-error">@errorMessage</div>
+    }
+    else if (displayedMovies.Count == 0)
+    {
+        <div class="movies-message">Фильмы не найдены</div>
+    }
+    else
+    {
+        <div class="movies-grid">
+            @foreach (var movie in displayedMovies)
+            {
+                <div class="movie-card">
+                    @if (!string.IsNullOrWhiteSpace(movie.img))
+                    {
+                        <img src="@($"http://localhost:5126{movie.img}")"
+                             alt="@movie.name"
+                             class="movie-card-image" />
+                    }
+                    else
+                    {
+                        <div class="movie-card-poster">
+                            <span>Нет фотографии</span>
+                        </div>
+                    }
+
+                    <div class="movie-card-body">
+                        <div class="movie-card-header">
+                            <h3 class="movie-card-title">@movie.name</h3>
+                            <span class="movie-card-rating">⭐ @movie.rating</span>
+                        </div>
+
+                        <p class="movie-card-description">@movie.description</p>
+
+                        <div class="movie-card-meta">
+                            <span class="movie-card-genre">@movie.Genre?.name</span>
+                            <span>@movie.date.ToString("dd.MM.yyyy")</span>
+                        </div>
+
+                        <div class="movie-card-actions">
+                            <button class="btn btn-secondary btn-sm"
+                                    @onclick="() => OpenMovie(movie)">
+                                Подробнее
+                            </button>
+
+                            <button type="button"
+                                    class="btn btn-outline btn-sm"
+                                    @onclick='() => Navigation.NavigateTo($"/moviechat/{movie.id_Movie}")'>
+                                Чат
+                            </button>
+
+                            @if (AuthService.CurrentUser?.Role_Id == 1)
+                            {
+                                <button class="btn btn-success btn-sm"
+                                        @onclick="() => EditMovie(movie.id_Movie)">
+                                    Изменить
+                                </button>
+
+                                <button class="btn btn-danger btn-sm"
+                                        @onclick="() => DeleteMovie(movie.id_Movie)">
+                                </button>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+@if (isMovieModalOpen && selectedMovie != null)
+{
+    <div class="modal-overlay" @onclick="CloseMovieModal">
+        <div class="movie-modal" @onclick:stopPropagation="true">
+            <button class="close-btn" @onclick="CloseMovieModal">✕</button>
+
+            @if (!string.IsNullOrWhiteSpace(selectedMovie.img))
+            {
+                <img src="@($"http://localhost:5126{selectedMovie.img}")"
+                     alt="@selectedMovie.name"
+                     class="movie-modal-image" />
+            }
+            else
+            {
+                <div class="movie-card-poster">
+                    <span>No image</span>
+                </div>
+            }
+
+            <div class="movie-modal-body">
+                <h2 class="movie-modal-title">@selectedMovie.name</h2>
+                <p class="movie-modal-description">@selectedMovie.description</p>
+
+                <div class="movie-modal-meta">
+                    <span class="movie-card-genre">@selectedMovie.Genre?.name</span>
+                    <span class="movie-card-rating">⭐ @selectedMovie.rating</span>
+                    <span>@selectedMovie.date.ToString("dd.MM.yyyy")</span>
+                </div>
+
+                @if (AuthService.CurrentUser?.Role_Id == 1)
+                {
+                    <div class="form-actions">
+                        <button class="btn btn-success"
+                                @onclick="() => EditMovie(selectedMovie.id_Movie)">
+                            Редактировать
+                        </button>
+
+                        <button class="btn btn-danger"
+                                @onclick="() => DeleteMovie(selectedMovie.id_Movie)">
+                            Удалить
+                        </button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private List<MovieResponse> movies = new();
+    private List<MovieResponse> displayedMovies = new();
+    private List<GenreResponse> genres = new();
+
+    private string? errorMessage;
+    private string searchText = "";
+    private string selectedSort = "name";
+    private int selectedGenreId = 0;
+
+    private MovieResponse? selectedMovie;
+    private bool isMovieModalOpen = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await AuthService.LoadSessionAsync();
+        await LoadGenres();
+        await LoadMovies();
+    }
+
+    private async Task LoadGenres()
+    {
+        if (string.IsNullOrWhiteSpace(AuthService.Token))
+            return;
+
+        var result = await ApiRequest.GetAllGenres(AuthService.Token);
+
+        if (result != null && result.status && result.genres != null)
+        {
+            genres = result.genres;
+        }
+    }
+
+    private async Task LoadMovies()
+    {
+        errorMessage = null;
+
+        if (string.IsNullOrWhiteSpace(AuthService.Token))
+        {
+            errorMessage = "Токен не найден";
+            return;
+        }
+
+        var result = await ApiRequest.GetAllMovies(AuthService.Token);
+
+        if (result == null ||  !result.status ||  result.movies == null)
+        {
+            errorMessage = "Не удалось загрузить фильмы";
+            return;
+        }
+
+        movies = result.movies;
+        ApplyFilters();
+    }
+
+    private void ApplyFilters()
+    {
+        displayedMovies = movies.ToList();
+
+        if (!string.IsNullOrWhiteSpace(searchText))
+        {
+            displayedMovies = displayedMovies
+                .Where(x => !string.IsNullOrWhiteSpace(x.name) &&
+                            x.name.Contains(searchText, StringComparison.OrdinalIgnoreCase))
+                .ToList();
+        }
+
+        if (selectedGenreId != 0)
+        {
+            displayedMovies = displayedMovies
+                .Where(x => x.id_Genre == selectedGenreId)
+                .ToList();
+        }
+
+        switch (selectedSort)
+        {
+            case "rating":
+                displayedMovies = displayedMovies.OrderByDescending(x => x.rating).ToList();
+                break;
+
+            case "date":
+                displayedMovies = displayedMovies.OrderByDescending(x => x.date).ToList();
+                break;
+
+            default:
+                displayedMovies = displayedMovies.OrderBy(x => x.name).ToList();
+                break;
+        }
+    }
+
+    private void OnSearchChanged(ChangeEventArgs e)
+    {
+        searchText = e.Value?.ToString() ?? "";
+        ApplyFilters();
+    }
+
+    private void OnSortChanged(ChangeEventArgs e)
+    {
+        selectedSort = e.Value?.ToString() ?? "name";
+        ApplyFilters();
+    }
+
+    private void OnGenreChanged(ChangeEventArgs e)
+    {
+        int.TryParse(e.Value?.ToString(), out selectedGenreId);
+        ApplyFilters();
+    }
+
+    private void OpenMovie(MovieResponse movie)
+    {
+        selectedMovie = movie;
+        isMovieModalOpen = true;
+    }
+
+    private void CloseMovieModal()
+    {
+        isMovieModalOpen = false;
+        selectedMovie = null;
+    }
+
+    private void EditMovie(int id)
+    {
+        Navigation.NavigateTo($"/admin/movies/edit/{id}");
+    }
+
+    private void CreateMovie()
+    {
+        Navigation.NavigateTo("/admin/movies/create");
+    }
+
+    private async Task DeleteMovie(int id)
+    {
+        errorMessage = null;
+
+        if (string.IsNullOrWhiteSpace(AuthService.Token))
+        {
+            errorMessage = "Токен не найден";
+            return;
+        }
+
+        var result = await ApiRequest.DeleteMovieAsyncResponse(id, AuthService.Token);
+
+        if (result == null || !result.status)
+        {
+            errorMessage = "Не удалось удалить фильм";
+            return;
+        }
+
+        if (selectedMovie != null && selectedMovie.id_Movie == id)
+        {
+            CloseMovieModal();
+        }
+
+        await LoadMovies();
+    }
+}

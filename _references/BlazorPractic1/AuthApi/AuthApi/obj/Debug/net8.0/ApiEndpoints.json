@@ -1,0 +1,218 @@
+[
+  {
+    "ContainingType": "AuthApi.Controllers.UserController",
+    "Method": "Authorize",
+    "RelativePath": "Authorize",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "auth",
+        "Type": "AuthApi.Requests.Auth",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthApi.Controllers.MovieController",
+    "Method": "CreateMovie",
+    "RelativePath": "CreateMovie",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newMovie",
+        "Type": "AuthApi.Requests.CreateMovie",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthApi.Controllers.UserController",
+    "Method": "CreateNewUser",
+    "RelativePath": "CreateNewUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createNewUser",
+        "Type": "AuthApi.Requests.CreateNewUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthApi.Controllers.MovieController",
+    "Method": "DeleteMovie",
+    "RelativePath": "DeleteMovie",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthApi.Controllers.UserController",
+    "Method": "DeleteUsers",
+    "RelativePath": "DeleteUsers",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user_id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthApi.Controllers.MovieController",
+    "Method": "GetAllGenres",
+    "RelativePath": "GetAllGenres",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthApi.Controllers.MovieController",
+    "Method": "GetAllMovies",
+    "RelativePath": "GetAllMovies",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthApi.Controllers.UserController",
+    "Method": "GetAllUsers",
+    "RelativePath": "GetAllUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthApi.Controllers.MovieController",
+    "Method": "GetMovieById",
+    "RelativePath": "GetMovieById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthApi.Controllers.UserController",
+    "Method": "GetUsersForChat",
+    "RelativePath": "GetUsersForChat",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthApi.Controllers.ImageController",
+    "Method": "UploadMovieImage",
+    "RelativePath": "Image/MovieImage",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthApi.Controllers.UserController",
+    "Method": "Profile",
+    "RelativePath": "Profile",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "profile",
+        "Type": "AuthApi.Requests.Profile",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthApi.Controllers.UserController",
+    "Method": "Registration",
+    "RelativePath": "Registration",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "regUser",
+        "Type": "AuthApi.Requests.Registration",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthApi.Controllers.MovieController",
+    "Method": "UpdateMovie",
+    "RelativePath": "UpdateMovie",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateMovie",
+        "Type": "AuthApi.Requests.UpdateMovie",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthApi.Controllers.UserController",
+    "Method": "UpdateUser",
+    "RelativePath": "UpdateUser",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateUser",
+        "Type": "AuthApi.Requests.UpdateUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

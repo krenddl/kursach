@@ -1,0 +1,52 @@
+@page "/admin"
+@using BlazorPractice1.ApiRequests.Services
+@inject AuthService AuthService
+@inject NavigationManager Navigation
+
+<PageTitle>Админка</PageTitle>
+
+@if (showContent)
+{
+    <div class="admin-page">
+        <div class="movies-topbar">
+            <div>
+                <h1 class="movies-title">Админка</h1>
+                <p class="movies-subtitle">Быстрый доступ к разделам управления</p>
+            </div>
+        </div>
+
+        <div class="admin-hub-grid">
+            <a href="/admin/users" class="admin-hub-card card">
+                <span class="admin-hub-card-title">Пользователи</span>
+                <span class="admin-hub-card-desc">Список учётных записей, роли, создание и редактирование</span>
+            </a>
+            <a href="/movies" class="admin-hub-card card">
+                <span class="admin-hub-card-title">Фильмы</span>
+                <span class="admin-hub-card-desc">Каталог, добавление и правка фильмов</span>
+            </a>
+        </div>
+    </div>
+}
+
+@code {
+    private bool showContent;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await AuthService.LoadSessionAsync();
+
+        if (!AuthService.IsAuthenticated || AuthService.CurrentUser == null)
+        {
+            Navigation.NavigateTo("/login");
+            return;
+        }
+
+        if (AuthService.CurrentUser.Role_Id != 1)
+        {
+            Navigation.NavigateTo("/profile");
+            return;
+        }
+
+        showContent = true;
+    }
+}

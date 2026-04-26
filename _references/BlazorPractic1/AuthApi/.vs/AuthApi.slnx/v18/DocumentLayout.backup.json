@@ -1,0 +1,674 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\requests\\privatechatgroupinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\requests\\privatechatgroupinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\requests\\privatemessagerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\requests\\privatemessagerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\requests\\updateprivatemessagerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\requests\\updateprivatemessagerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\requests\\updatemoviemessagerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\requests\\updatemoviemessagerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\requests\\sendprivatemessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\requests\\sendprivatemessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\requests\\sendmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\requests\\sendmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\requests\\sendmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\requests\\sendmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\requests\\createnewuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\requests\\createnewuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\services\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\services\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\requests\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\requests\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\interfaces\\ichatservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\interfaces\\ichatservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\controllers\\imagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\controllers\\imagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\models\\privatemessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\models\\privatemessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\requests\\chatresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\requests\\chatresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\interfaces\\iuserservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\interfaces\\iuserservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\requests\\messagereq.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\requests\\messagereq.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\services\\movieservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\services\\movieservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\requests\\auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\requests\\auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\requests\\updatemovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\requests\\updatemovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\requests\\updateuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\requests\\updateuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\requests\\messagerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\requests\\messagerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\interfaces\\imovieservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\interfaces\\imovieservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\requests\\createmovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\requests\\createmovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\models\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\models\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\universalmethods\\jwtgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\universalmethods\\jwtgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\customatributes\\roleauthorizeattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\customatributes\\roleauthorizeattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\databasecontext\\contextdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\databasecontext\\contextdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\models\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\models\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\requests\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\requests\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\models\\movies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\models\\movies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|c:\\users\\uryuqq\\desktop\\blazor\\blazorpractic1\\authapi\\authapi\\authapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CC3C3F62-DD44-8AAA-D9A5-136649C4F0EB}|AuthApi\\AuthApi.csproj|solutionrelative:authapi\\authapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\uryuqq\\source\\repos\\Blazor\\Practice\\Practice1\\BlazorPractic1\\AuthApi\\AuthApi\\Migrations\\20260313222507_First.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Migrations\\20260408073243_second.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AuthApi\\Migrations\\20260408073243_second.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 161,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PrivateMessageRequest.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\PrivateMessageRequest.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Requests\\PrivateMessageRequest.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\PrivateMessageRequest.cs",
+              "RelativeToolTip": "AuthApi\\Requests\\PrivateMessageRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T07:25:44.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UpdatePrivateMessageRequest.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\UpdatePrivateMessageRequest.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Requests\\UpdatePrivateMessageRequest.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\UpdatePrivateMessageRequest.cs",
+              "RelativeToolTip": "AuthApi\\Requests\\UpdatePrivateMessageRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T16:23:49.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UpdateMovieMessageRequest.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\UpdateMovieMessageRequest.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Requests\\UpdateMovieMessageRequest.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\UpdateMovieMessageRequest.cs",
+              "RelativeToolTip": "AuthApi\\Requests\\UpdateMovieMessageRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T21:03:42.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SendPrivateMessage.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\SendPrivateMessage.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Requests\\SendPrivateMessage.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\SendPrivateMessage.cs",
+              "RelativeToolTip": "AuthApi\\Requests\\SendPrivateMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T19:05:38.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SendMessage.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\SendMessage.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Requests\\SendMessage.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\SendMessage.cs",
+              "RelativeToolTip": "AuthApi\\Requests\\SendMessage.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T19:05:17.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CreateNewUser.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\CreateNewUser.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Requests\\CreateNewUser.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\CreateNewUser.cs",
+              "RelativeToolTip": "AuthApi\\Requests\\CreateNewUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T15:40:41.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Profile.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\Profile.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Requests\\Profile.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\Profile.cs",
+              "RelativeToolTip": "AuthApi\\Requests\\Profile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T10:13:51.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IChatServices.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Interfaces\\IChatServices.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Interfaces\\IChatServices.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Interfaces\\IChatServices.cs",
+              "RelativeToolTip": "AuthApi\\Interfaces\\IChatServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBAAAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T18:47:28.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ChatController.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Controllers\\ChatController.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Controllers\\ChatController.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Controllers\\ChatController.cs",
+              "RelativeToolTip": "AuthApi\\Controllers\\ChatController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T19:46:29.593Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ImageController.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Controllers\\ImageController.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Controllers\\ImageController.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Controllers\\ImageController.cs",
+              "RelativeToolTip": "AuthApi\\Controllers\\ImageController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwBMAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T08:15:51.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Program.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Program.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Program.cs",
+              "RelativeToolTip": "AuthApi\\Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAmwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T15:26:22.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ChatHub.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Hubs\\ChatHub.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Hubs\\ChatHub.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Hubs\\ChatHub.cs",
+              "RelativeToolTip": "AuthApi\\Hubs\\ChatHub.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAcwDUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T18:45:58.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PrivateMessage.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Models\\PrivateMessage.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Models\\PrivateMessage.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Models\\PrivateMessage.cs",
+              "RelativeToolTip": "AuthApi\\Models\\PrivateMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T18:58:11.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ChatResult.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\ChatResult.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Requests\\ChatResult.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\ChatResult.cs",
+              "RelativeToolTip": "AuthApi\\Requests\\ChatResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T21:39:34.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "MessageReq.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\MessageReq.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Requests\\MessageReq.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\MessageReq.cs",
+              "RelativeToolTip": "AuthApi\\Requests\\MessageReq.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T06:55:08.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MovieServices.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Services\\MovieServices.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Services\\MovieServices.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Services\\MovieServices.cs",
+              "RelativeToolTip": "AuthApi\\Services\\MovieServices.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAEwFwAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T10:08:42.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Controllers\\UserController.cs",
+              "RelativeToolTip": "AuthApi\\Controllers\\UserController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAMwEQAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T19:38:01.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IUserServices.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Interfaces\\IUserServices.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Interfaces\\IUserServices.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Interfaces\\IUserServices.cs",
+              "RelativeToolTip": "AuthApi\\Interfaces\\IUserServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T19:24:03.774Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Genre.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Models\\Genre.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Models\\Genre.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Models\\Genre.cs",
+              "RelativeToolTip": "AuthApi\\Models\\Genre.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T22:26:34.594Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "20260408073243_second.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Migrations\\20260408073243_second.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Migrations\\20260408073243_second.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Migrations\\20260408073243_second.cs",
+              "RelativeToolTip": "AuthApi\\Migrations\\20260408073243_second.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T07:32:43.314Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "MessageRequest.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\MessageRequest.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Requests\\MessageRequest.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\MessageRequest.cs",
+              "RelativeToolTip": "AuthApi\\Requests\\MessageRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T19:26:33.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CreateMovie.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\CreateMovie.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Requests\\CreateMovie.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\CreateMovie.cs",
+              "RelativeToolTip": "AuthApi\\Requests\\CreateMovie.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T11:40:44.532Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "JwtGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\UniversalMethods\\JwtGenerator.cs",
+              "RelativeDocumentMoniker": "AuthApi\\UniversalMethods\\JwtGenerator.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\UniversalMethods\\JwtGenerator.cs",
+              "RelativeToolTip": "AuthApi\\UniversalMethods\\JwtGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T22:20:49.675Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IMovieServices.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Interfaces\\IMovieServices.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Interfaces\\IMovieServices.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Interfaces\\IMovieServices.cs",
+              "RelativeToolTip": "AuthApi\\Interfaces\\IMovieServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T10:09:02.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "RoleAuthorizeAttribute.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\CustomAtributes\\RoleAuthorizeAttribute.cs",
+              "RelativeDocumentMoniker": "AuthApi\\CustomAtributes\\RoleAuthorizeAttribute.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\CustomAtributes\\RoleAuthorizeAttribute.cs",
+              "RelativeToolTip": "AuthApi\\CustomAtributes\\RoleAuthorizeAttribute.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAowCoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T22:20:52.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ContextDb.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\DatabaseContext\\ContextDb.cs",
+              "RelativeDocumentMoniker": "AuthApi\\DatabaseContext\\ContextDb.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\DatabaseContext\\ContextDb.cs",
+              "RelativeToolTip": "AuthApi\\DatabaseContext\\ContextDb.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBIAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T15:31:53.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Models\\User.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Models\\User.cs",
+              "RelativeToolTip": "AuthApi\\Models\\User.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBIAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T15:27:29.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Session.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Models\\Session.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Models\\Session.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Models\\Session.cs",
+              "RelativeToolTip": "AuthApi\\Models\\Session.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T22:26:36.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Models\\Role.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Models\\Role.cs",
+              "RelativeToolTip": "AuthApi\\Models\\Role.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAgwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T16:20:27.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UpdateMovie.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\UpdateMovie.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Requests\\UpdateMovie.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\UpdateMovie.cs",
+              "RelativeToolTip": "AuthApi\\Requests\\UpdateMovie.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T12:21:23.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Registration.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\Registration.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Requests\\Registration.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\Registration.cs",
+              "RelativeToolTip": "AuthApi\\Requests\\Registration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T10:14:32.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Movies.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Models\\Movies.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Models\\Movies.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Models\\Movies.cs",
+              "RelativeToolTip": "AuthApi\\Models\\Movies.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAxwBIAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T22:26:35.278Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UpdateUser.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\UpdateUser.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Requests\\UpdateUser.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\UpdateUser.cs",
+              "RelativeToolTip": "AuthApi\\Requests\\UpdateUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T15:42:46.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Auth.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\Auth.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Requests\\Auth.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\Auth.cs",
+              "RelativeToolTip": "AuthApi\\Requests\\Auth.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T15:42:19.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\appsettings.json",
+              "RelativeDocumentMoniker": "AuthApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\appsettings.json",
+              "RelativeToolTip": "AuthApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-26T15:33:15.362Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "20260313222507_First.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\source\\repos\\Blazor\\Practice\\Practice1\\BlazorPractic1\\AuthApi\\AuthApi\\Migrations\\20260313222507_First.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\Blazor\\Practice\\Practice1\\BlazorPractic1\\AuthApi\\AuthApi\\Migrations\\20260313222507_First.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\source\\repos\\Blazor\\Practice\\Practice1\\BlazorPractic1\\AuthApi\\AuthApi\\Migrations\\20260313222507_First.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\Blazor\\Practice\\Practice1\\BlazorPractic1\\AuthApi\\AuthApi\\Migrations\\20260313222507_First.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T22:25:07.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "AuthApi.csproj",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\AuthApi.csproj",
+              "RelativeDocumentMoniker": "AuthApi\\AuthApi.csproj",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\AuthApi.csproj",
+              "RelativeToolTip": "AuthApi\\AuthApi.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-26T15:26:54.392Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 239,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PrivateChatGroupInfo.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\PrivateChatGroupInfo.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Requests\\PrivateChatGroupInfo.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\PrivateChatGroupInfo.cs",
+              "RelativeToolTip": "AuthApi\\Requests\\PrivateChatGroupInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T15:10:29.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ChatService.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Services\\ChatService.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Services\\ChatService.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Services\\ChatService.cs",
+              "RelativeToolTip": "AuthApi\\Services\\ChatService.cs",
+              "ViewState": "AgIAAOgAAAAAAAAAAAAAAAgBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T19:06:30.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SendMessageDto.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\SendMessageDto.cs",
+              "RelativeDocumentMoniker": "AuthApi\\Requests\\SendMessageDto.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\blazor\\BlazorPractic1\\AuthApi\\AuthApi\\Requests\\SendMessageDto.cs",
+              "RelativeToolTip": "AuthApi\\Requests\\SendMessageDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T21:03:21.843Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

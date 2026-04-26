@@ -1,0 +1,396 @@
+@page "/moviechat/{movieId:int}"
+@implements IAsyncDisposable
+
+@using BlazorPractice1.ApiRequests
+@using BlazorPractice1.ApiRequests.Model
+@using BlazorPractice1.ApiRequests.Services
+@using Microsoft.AspNetCore.SignalR.Client
+@using System.Net.Http.Json
+@using System.Text.Json
+
+<div class="chat-page">
+    <div class="movies-topbar">
+        <div>
+            <h2 class="page-title">Чат фильма</h2>
+            <p class="page-subtitle">
+                @(movie != null ? movie.name : "Обсуждение фильма в реальном времени")</p> 
+                </div></div>
+
+    @if (!string.IsNullOrWhiteSpace(hubError))
+    {
+        <div class="alert alert-error mb-20">@hubError</div>
+    }
+
+    <div class="card chat-card">
+        <div class="chat-box">
+            @if (messages.Count == 0)
+            {
+                <div class="chat-empty">Сообщений пока нет</div>
+            }
+            else
+            {
+                @foreach (var m in messages)
+                {
+                    var isMine = AuthService.CurrentUser != null && m.userId == AuthService.CurrentUser.id_User;
+
+                    <div class="chat-message @(isMine ? "mine" : "other")">
+                        <div class="chat-message-top">
+                            @if (AuthService.CurrentUser != null && m.userId != AuthService.CurrentUser.id_User)
+                            {
+                                <button type="button"
+                                        class="chat-user-link"
+                                        @onclick="() => OpenPrivateChat(m.userId)">
+                                    @GetUserName(m.userId)
+                                </button>
+                            }
+                            else
+                            {
+                                <span class="chat-user">@GetUserName(m.userId)</span>
+                            }
+                        </div>
+
+                        @if (!string.IsNullOrWhiteSpace(m.text))
+                        {
+                            <div>@m.text</div>
+                        }
+
+                        @if (!string.IsNullOrWhiteSpace(m.imageUrl))
+                        {
+                            <img class="chat-image" src="@($"http://localhost:5126{m.imageUrl}")" alt="" />
+                        }
+
+                        @if (m.isEdited)
+                        {
+                            <div class="chat-edited">(изменено)</div>
+                        }
+
+                        <div class="chat-actions">
+                            <button type="button" class="btn btn-outline btn-sm" @onclick="() => StartEdit(m)">Редактировать</button>
+                            <button type="button" class="btn btn-danger btn-sm" @onclick="() => DeleteMessage(m.id_Message)">Удалить</button>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+
+    <div class="card chat-card mt-20">
+        <div class="chat-input-row">
+            <input class="form-control" @bind="text" placeholder="Введите сообщение" />
+            <InputFile @key="fileInputKey" OnChange="OnFileChange" accept="image/*" />
+            <button type="button" class="btn btn-primary" @onclick="SendMessage">Отправить</button>
+        </div>
+
+        @if (editingMessage != null)
+        {
+            <div class="chat-edit-panel">
+                <div class="form-group">
+                    <label class="form-label">Редактирование сообщения</label>
+                    <input class="form-control" @bind="editText" />
+                </div>
+
+                <div class="form-group">
+                    <InputFile @key="editFileInputKey" OnChange="OnEditFileChange" accept="image/*" />
+                </div>
+
+                <label class="form-label" style="display:flex; gap:8px; align-items:center;">
+                    <input type="checkbox" @bind="removeImage" />
+                    удалить фото
+                </label>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-success" @onclick="SaveEdit">Сохранить</button>
+                    <button type="button" class="btn btn-outline" @onclick="CancelEdit">Отмена</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    private static readonly JsonSerializerOptions JsonOptions = new() { PropertyNameCaseInsensitive = true };
+
+    [Parameter] public int movieId { get; set; }
+    private MovieResponse? movie;
+    [Inject] private NavigationManager Nav { get; set; }
+    [Inject] private HttpClient Http { get; set; }
+    [Inject] private AuthService AuthService { get; set; }
+    [Inject] private ApiRequest ApiRequest { get; set; }
+    private const long MaxImageSize = 15 * 1024 * 1024;
+
+    private int fileInputKey = 0;
+    private int editFileInputKey = 0;
+
+    private HubConnection? hub;
+
+    private List<MessageModel> messages = new();
+
+    private string text = string.Empty;
+    private IBrowserFile? file;
+
+    private MessageModel? editingMessage;
+    private string editText = string.Empty;
+    private IBrowserFile? editFile;
+    private bool removeImage;
+    private string? hubError;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await AuthService.LoadSessionAsync();
+
+        if (!AuthService.IsAuthenticated || AuthService.CurrentUser == null || string.IsNullOrWhiteSpace(AuthService.Token))
+        {
+            Nav.NavigateTo("/login");
+            return;
+        }
+
+        var movieResponse = await ApiRequest.GetMovieByIdResponse(movieId, AuthService.Token);
+
+        if (movieResponse != null && movieResponse.status && movieResponse.movie != null)
+        {
+            movie = movieResponse.movie;
+        }
+
+        var usersResponse = await ApiRequest.GetUsersForChatAsyncResponse(AuthService.Token);
+
+        if (usersResponse != null && usersResponse.status && usersResponse.users != null)
+        {
+            chatUsers = usersResponse.users;
+        }
+
+
+        hub = new HubConnectionBuilder().WithUrl($"http://localhost:5126/chathub?token={Uri.EscapeDataString(AuthService.Token!)}").WithAutomaticReconnect().Build();
+
+        hub.On<MessageModel>("ReceiveMovieMessage", msg =>
+            InvokeAsync(() =>
+            {
+                messages.Add(msg);
+                StateHasChanged();
+            }));
+
+        hub.On<MessageModel>("UpdateMovieMessage", msg =>
+            InvokeAsync(() =>
+            {
+                var m = messages.FirstOrDefault(x => x.id_Message == msg.id_Message);
+                if (m != null)
+                {
+                    m.text = msg.text;
+                    m.imageUrl = msg.imageUrl;
+                    m.isEdited = msg.isEdited;
+                    StateHasChanged();
+                }
+            }));
+
+        hub.On<string>("ChatError", error => InvokeAsync(() => { hubError = error; StateHasChanged(); }));
+
+        hub.On<int>("DeleteMovieMessage", id =>
+            InvokeAsync(() =>
+            {
+                var m = messages.FirstOrDefault(x => x.id_Message == id);
+                if (m != null)
+                {
+                    messages.Remove(m);
+                    StateHasChanged();
+                }
+            }));
+
+        try
+        {
+            await hub.StartAsync();
+            await hub.InvokeAsync("Join", $"movie_{movieId}");
+            await LoadMessages();
+        }
+        catch (Exception ex)
+        {
+            hubError = $"Не удалось подключиться к чату: {ex.Message}";
+        }
+    }
+
+    private async Task LoadMessages()
+    {
+        if(hub == null)
+        {
+            return;
+        }
+        try
+        {
+            messages = await hub.InvokeAsync<List<MessageModel>>("GetMovieMessagesAsync", movieId);
+        }
+        catch
+        {
+
+        }
+    }
+
+    private async Task SendMessage()
+    {
+        if (AuthService.CurrentUser == null || hub == null)
+            return;
+
+        try
+        {
+            var (base64, fileName) = await ReadFileAsBase64Async(file);
+
+            await hub.InvokeAsync("SendMovieMessage", new SendMessageDto
+            {
+                movieId = movieId,
+                userId = AuthService.CurrentUser.id_User,
+                text = text,
+                imageBase64 = base64,
+                imageFileName = fileName
+            });
+
+            text = string.Empty;
+            file = null;
+            hubError = null;
+            fileInputKey++;
+        }
+        catch (Exception ex)
+        {
+            hubError = $"Ошибка отправки: {ex.Message}";
+        }
+    }
+
+    private async Task DeleteMessage(int id)
+    {
+        if (hub == null)
+            return;
+
+        try
+        {
+            await hub.InvokeAsync("DeleteMovieMessage", id);
+        }
+        catch (Exception ex)
+        {
+            hubError = $"Ошибка удаления: {ex.Message}";
+        }
+    }
+
+    private void StartEdit(MessageModel m)
+    {
+        editingMessage = m;
+        editText = m.text ?? string.Empty;
+    }
+
+    private async Task SaveEdit()
+    {
+        if (editingMessage == null || hub == null)
+            return;
+
+        try
+        {
+            var (base64, fileName) = await ReadFileAsBase64Async(editFile);
+
+            await hub.InvokeAsync("EditMovieMessage", new UpdateMovieMessageRequest
+            {
+                id_Message = editingMessage.id_Message,
+                text = editText,
+                imageBase64 = base64,
+                imageFileName = fileName,
+                removeCurrentImage = removeImage
+            });
+
+            editingMessage = null;
+            removeImage = false;
+            editFile = null;
+            hubError = null;
+            editFileInputKey++;
+        }
+        catch (Exception ex)
+        {
+            hubError = $"Ошибка редактирования: {ex.Message}";
+        }
+    }
+
+    private void CancelEdit()
+    {
+        editingMessage = null;
+        removeImage = false;
+        editFile = null;
+    }
+
+    private void OnFileChange(InputFileChangeEventArgs e)
+    {
+        var selected = e.File;
+
+        if (selected.Size > MaxImageSize)
+        {
+            hubError = "Файл слишком большой. Максимум 15 MB.";
+            file = null;
+            return;
+        }
+
+        hubError = null;
+        file = selected;
+    }
+
+    private void OnEditFileChange(InputFileChangeEventArgs e)
+    {
+        var selected = e.File;
+
+        if (selected.Size > MaxImageSize)
+        {
+            hubError = "Файл слишком большой. Максимум 5 MB.";
+            editFile = null;
+            return;
+        }
+
+        hubError = null;
+        editFile = selected;
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        if (hub is not null)
+        {
+            try
+            {
+                await hub.InvokeAsync("Leave", $"movie_{movieId}");
+            }
+            catch { }
+
+            await hub.DisposeAsync();
+        }
+    }
+
+    private List<ChatUserDirectoryEntry> chatUsers = new();
+
+    private string GetUserName(int userId)
+    {
+        if (AuthService.CurrentUser != null && AuthService.CurrentUser.id_User == userId)
+            return "Вы";
+
+        var user = chatUsers.FirstOrDefault(x => x.id_User == userId);
+
+        if (user == null || string.IsNullOrWhiteSpace(user.Name))
+            return $"Пользователь {userId}";
+
+        return user.Name;
+    }
+
+    private void OpenPrivateChat(int userId)
+    {
+        if (AuthService.CurrentUser == null)
+            return;
+
+        if (userId == AuthService.CurrentUser.id_User)
+            return;
+
+        Nav.NavigateTo($"/privatechat/{userId}");
+    }
+
+    private async Task<(string? Base64, string? FileName)> ReadFileAsBase64Async(IBrowserFile? selectedFile)
+    {
+        if (selectedFile == null)
+            return (null, null);
+
+        using var stream = selectedFile.OpenReadStream(maxAllowedSize: MaxImageSize);
+        using var ms = new MemoryStream();
+        await stream.CopyToAsync(ms);
+
+        var bytes = ms.ToArray();
+        var base64 = Convert.ToBase64String(bytes);
+
+        return (base64, selectedFile.Name);
+    }
+}

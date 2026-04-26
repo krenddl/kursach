@@ -1,0 +1,1204 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\services\\timeslotservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\services\\timeslotservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\services\\specializationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\services\\specializationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\services\\clinicserviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\services\\clinicserviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\services\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\services\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\requests\\createspecializationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\requests\\createspecializationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\migrations\\20260422225812_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\migrations\\20260422225812_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\seed\\dbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\seed\\dbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\services\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\services\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\services\\patientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\services\\patientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\models\\refferal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\models\\refferal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\appdbcontext\\contextdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\appdbcontext\\contextdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\enums\\referralstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\enums\\referralstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\enums\\refferaltype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\enums\\refferaltype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Migrations\\20260422104901_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigiClinicApi\\Migrations\\20260422104901_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\services\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\services\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\enums\\appointmentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\enums\\appointmentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\requests\\createappointmentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\requests\\createappointmentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\services\\referralservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\services\\referralservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\models\\doctorprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\models\\doctorprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\requests\\createreferralrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\requests\\createreferralrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Migrations\\20260422103435_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DigiClinicApi\\Migrations\\20260422103435_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\enums\\timeslotstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\enums\\timeslotstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\uryuqq\\Desktop\\digi\\DigiClinicApi\\DigiClinicApi\\Migrations\\20260420223229_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\services\\doctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\services\\doctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\models\\doctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\models\\doctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\controllers\\doctorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\controllers\\doctorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\controllers\\appointmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\controllers\\appointmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\interfaces\\iappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\interfaces\\iappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\models\\timeslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\models\\timeslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\models\\specialization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\models\\specialization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\requests\\updateprofilerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\requests\\updateprofilerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\interfaces\\ipatientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\interfaces\\ipatientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\interfaces\\idoctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\interfaces\\idoctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\interfaces\\iprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\interfaces\\iprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\requests\\updatedoctorreques.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\requests\\updatedoctorreques.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\controllers\\patientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\controllers\\patientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\interfaces\\idashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\interfaces\\idashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\uryuqq\\source\\repos\\DigiClinicApi\\DigiClinicApi\\Migrations\\20260416220715_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\uryuqq\\source\\repos\\DigiClinicApi\\DigiClinicApi\\Migrations\\20260416204851_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\controllers\\timeslotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\controllers\\timeslotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\interfaces\\iclinicserviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\interfaces\\iclinicserviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\requests\\adddoctorconclusionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\requests\\adddoctorconclusionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\requests\\updateappointmentstatusrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\requests\\updateappointmentstatusrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\interfaces\\itimeslotservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\interfaces\\itimeslotservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\requests\\createtimeslotrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\requests\\createtimeslotrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\requests\\updateservicerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\requests\\updateservicerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\requests\\createservicerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\requests\\createservicerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\controllers\\specializationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\controllers\\specializationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\requests\\updatespecializationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\requests\\updatespecializationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\interfaces\\ispecializationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\interfaces\\ispecializationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\responses\\specializationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\responses\\specializationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\responses\\doctordetailsresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\responses\\doctordetailsresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\responses\\doctorcardresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\responses\\doctorcardresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\requests\\createdoctorrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\requests\\createdoctorrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\responses\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\responses\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\requests\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\requests\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\requests\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\requests\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\interfaces\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\interfaces\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\models\\patientprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\models\\patientprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|c:\\users\\uryuqq\\desktop\\kursach\\digi\\digiclinicapi\\digiclinicapi\\digiclinicapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{498152FB-BB4E-8D3C-6EE4-06FEF8E9BAC0}|DigiClinicApi\\DigiClinicApi.csproj|solutionrelative:digiclinicapi\\digiclinicapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SpecializationService.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Services\\SpecializationService.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Services\\SpecializationService.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Services\\SpecializationService.cs",
+              "RelativeToolTip": "DigiClinicApi\\Services\\SpecializationService.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAIwF4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:17:08.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PatientService.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Services\\PatientService.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Services\\PatientService.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Services\\PatientService.cs",
+              "RelativeToolTip": "DigiClinicApi\\Services\\PatientService.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAIA5wHYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T20:04:48.154Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CreateSpecializationRequest.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\CreateSpecializationRequest.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Requests\\CreateSpecializationRequest.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\CreateSpecializationRequest.cs",
+              "RelativeToolTip": "DigiClinicApi\\Requests\\CreateSpecializationRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:22:53.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DashboardService.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Services\\DashboardService.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Services\\DashboardService.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Services\\DashboardService.cs",
+              "RelativeToolTip": "DigiClinicApi\\Services\\DashboardService.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAQwGsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:36:24.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClinicServiceService.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Services\\ClinicServiceService.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Services\\ClinicServiceService.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Services\\ClinicServiceService.cs",
+              "RelativeToolTip": "DigiClinicApi\\Services\\ClinicServiceService.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAWwEQAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:26:53.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TimeSlotService.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Services\\TimeSlotService.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Services\\TimeSlotService.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Services\\TimeSlotService.cs",
+              "RelativeToolTip": "DigiClinicApi\\Services\\TimeSlotService.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAIwFUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:29:39.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20260422225812_first.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Migrations\\20260422225812_first.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Migrations\\20260422225812_first.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Migrations\\20260422225812_first.cs",
+              "RelativeToolTip": "DigiClinicApi\\Migrations\\20260422225812_first.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAQwA8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T22:58:12.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DbSeeder.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Seed\\DbSeeder.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Seed\\DbSeeder.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Seed\\DbSeeder.cs",
+              "RelativeToolTip": "DigiClinicApi\\Seed\\DbSeeder.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAQwDUAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T22:09:58.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RefferalType.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Enums\\RefferalType.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Enums\\RefferalType.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Enums\\RefferalType.cs",
+              "RelativeToolTip": "DigiClinicApi\\Enums\\RefferalType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T10:35:16.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AppointmentStatus.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Enums\\AppointmentStatus.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Enums\\AppointmentStatus.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Enums\\AppointmentStatus.cs",
+              "RelativeToolTip": "DigiClinicApi\\Enums\\AppointmentStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T20:38:46.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ReferralStatus.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Enums\\ReferralStatus.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Enums\\ReferralStatus.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Enums\\ReferralStatus.cs",
+              "RelativeToolTip": "DigiClinicApi\\Enums\\ReferralStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T10:39:02.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProfileService.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Services\\ProfileService.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Services\\ProfileService.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Services\\ProfileService.cs",
+              "RelativeToolTip": "DigiClinicApi\\Services\\ProfileService.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAAwBQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T20:13:41.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ContextDb.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\AppDbContext\\ContextDb.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\AppDbContext\\ContextDb.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\AppDbContext\\ContextDb.cs",
+              "RelativeToolTip": "DigiClinicApi\\AppDbContext\\ContextDb.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAnwIwAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T20:45:06.942Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "20260422104901_first.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Migrations\\20260422104901_first.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Migrations\\20260422104901_first.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Migrations\\20260422104901_first.cs",
+              "RelativeToolTip": "DigiClinicApi\\Migrations\\20260422104901_first.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T10:49:01.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Models\\Appointment.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Models\\Appointment.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Models\\Appointment.cs",
+              "RelativeToolTip": "DigiClinicApi\\Models\\Appointment.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAzwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T20:40:15.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Refferal.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Models\\Refferal.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Models\\Refferal.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Models\\Refferal.cs",
+              "RelativeToolTip": "DigiClinicApi\\Models\\Refferal.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAUwBkAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T10:36:00.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CreateAppointmentRequest.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\CreateAppointmentRequest.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Requests\\CreateAppointmentRequest.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\CreateAppointmentRequest.cs",
+              "RelativeToolTip": "DigiClinicApi\\Requests\\CreateAppointmentRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:32:15.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AppointmentService.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Services\\AppointmentService.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Services\\AppointmentService.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Services\\AppointmentService.cs",
+              "RelativeToolTip": "DigiClinicApi\\Services\\AppointmentService.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAQwGIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:33:48.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ReferralService.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Services\\ReferralService.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Services\\ReferralService.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Services\\ReferralService.cs",
+              "RelativeToolTip": "DigiClinicApi\\Services\\ReferralService.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAkwIYAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T10:37:11.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Models\\Role.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Models\\Role.cs",
+              "RelativeToolTip": "DigiClinicApi\\Models\\Role.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T20:39:19.933Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DoctorProfile.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Models\\DoctorProfile.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Models\\DoctorProfile.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Models\\DoctorProfile.cs",
+              "RelativeToolTip": "DigiClinicApi\\Models\\DoctorProfile.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA5wBoAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T20:39:36.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CreateReferralRequest.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\CreateReferralRequest.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Requests\\CreateReferralRequest.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\CreateReferralRequest.cs",
+              "RelativeToolTip": "DigiClinicApi\\Requests\\CreateReferralRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T10:36:53.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "20260422103435_first.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Migrations\\20260422103435_first.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Migrations\\20260422103435_first.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Migrations\\20260422103435_first.cs",
+              "RelativeToolTip": "DigiClinicApi\\Migrations\\20260422103435_first.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T10:34:35.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "20260420223229_first.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\digi\\DigiClinicApi\\DigiClinicApi\\Migrations\\20260420223229_first.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\digi\\DigiClinicApi\\DigiClinicApi\\Migrations\\20260420223229_first.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\digi\\DigiClinicApi\\DigiClinicApi\\Migrations\\20260420223229_first.cs",
+              "RelativeToolTip": "..\\..\\..\\digi\\DigiClinicApi\\DigiClinicApi\\Migrations\\20260420223229_first.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T22:32:29.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "DoctorService.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Models\\DoctorService.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Models\\DoctorService.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Models\\DoctorService.cs",
+              "RelativeToolTip": "DigiClinicApi\\Models\\DoctorService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T20:40:02.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "DoctorService.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Services\\DoctorService.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Services\\DoctorService.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Services\\DoctorService.cs",
+              "RelativeToolTip": "DigiClinicApi\\Services\\DoctorService.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAQwEoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:20:41.85Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "TimeSlotStatus.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Enums\\TimeSlotStatus.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Enums\\TimeSlotStatus.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Enums\\TimeSlotStatus.cs",
+              "RelativeToolTip": "DigiClinicApi\\Enums\\TimeSlotStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T20:38:53.864Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "DigiClinicApi\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAqwB0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T22:14:59.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Service.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Models\\Service.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Models\\Service.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Models\\Service.cs",
+              "RelativeToolTip": "DigiClinicApi\\Models\\Service.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T20:39:56.66Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "DoctorsController.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Controllers\\DoctorsController.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Controllers\\DoctorsController.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Controllers\\DoctorsController.cs",
+              "RelativeToolTip": "DigiClinicApi\\Controllers\\DoctorsController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:21:25.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Enums\\UserRole.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Enums\\UserRole.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Enums\\UserRole.cs",
+              "RelativeToolTip": "DigiClinicApi\\Enums\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T20:38:27.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "AppointmentsController.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Controllers\\AppointmentsController.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Controllers\\AppointmentsController.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Controllers\\AppointmentsController.cs",
+              "RelativeToolTip": "DigiClinicApi\\Controllers\\AppointmentsController.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAqwD4AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:34:08.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "IAppointmentService.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Interfaces\\IAppointmentService.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Interfaces\\IAppointmentService.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Interfaces\\IAppointmentService.cs",
+              "RelativeToolTip": "DigiClinicApi\\Interfaces\\IAppointmentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:33:20.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "TimeSlot.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Models\\TimeSlot.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Models\\TimeSlot.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Models\\TimeSlot.cs",
+              "RelativeToolTip": "DigiClinicApi\\Models\\TimeSlot.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T20:40:06.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Specialization.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Models\\Specialization.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Models\\Specialization.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Models\\Specialization.cs",
+              "RelativeToolTip": "DigiClinicApi\\Models\\Specialization.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T20:39:49.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Models\\User.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Models\\User.cs",
+              "RelativeToolTip": "DigiClinicApi\\Models\\User.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAgwB8AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T20:39:26.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "UpdateProfileRequest.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\UpdateProfileRequest.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Requests\\UpdateProfileRequest.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\UpdateProfileRequest.cs",
+              "RelativeToolTip": "DigiClinicApi\\Requests\\UpdateProfileRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T20:10:10.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "IPatientService.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Interfaces\\IPatientService.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Interfaces\\IPatientService.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Interfaces\\IPatientService.cs",
+              "RelativeToolTip": "DigiClinicApi\\Interfaces\\IPatientService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T20:04:20.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Program.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Program.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Program.cs",
+              "RelativeToolTip": "DigiClinicApi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T20:47:18.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "IDoctorService.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Interfaces\\IDoctorService.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Interfaces\\IDoctorService.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Interfaces\\IDoctorService.cs",
+              "RelativeToolTip": "DigiClinicApi\\Interfaces\\IDoctorService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:16:40.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Controllers\\ProfileController.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "DigiClinicApi\\Controllers\\ProfileController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T20:14:21.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "IProfileService.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Interfaces\\IProfileService.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Interfaces\\IProfileService.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Interfaces\\IProfileService.cs",
+              "RelativeToolTip": "DigiClinicApi\\Interfaces\\IProfileService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T20:13:12.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "UpdateDoctorReques.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\UpdateDoctorReques.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Requests\\UpdateDoctorReques.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\UpdateDoctorReques.cs",
+              "RelativeToolTip": "DigiClinicApi\\Requests\\UpdateDoctorReques.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T20:10:42.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "PatientsController.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Controllers\\PatientsController.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Controllers\\PatientsController.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Controllers\\PatientsController.cs",
+              "RelativeToolTip": "DigiClinicApi\\Controllers\\PatientsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T20:05:42.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "IDashboardService.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Interfaces\\IDashboardService.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Interfaces\\IDashboardService.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Interfaces\\IDashboardService.cs",
+              "RelativeToolTip": "DigiClinicApi\\Interfaces\\IDashboardService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:35:38.348Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Services\\AuthService.cs",
+              "RelativeToolTip": "DigiClinicApi\\Services\\AuthService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAC8AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T22:13:24.66Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "ServiceController.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Controllers\\ServiceController.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Controllers\\ServiceController.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Controllers\\ServiceController.cs",
+              "RelativeToolTip": "DigiClinicApi\\Controllers\\ServiceController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAA8wCwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:27:10.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "TimeSlotController.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Controllers\\TimeSlotController.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Controllers\\TimeSlotController.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Controllers\\TimeSlotController.cs",
+              "RelativeToolTip": "DigiClinicApi\\Controllers\\TimeSlotController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwCUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:30:02.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "DigiClinicApi\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:36:54.664Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "IClinicServiceService.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Interfaces\\IClinicServiceService.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Interfaces\\IClinicServiceService.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Interfaces\\IClinicServiceService.cs",
+              "RelativeToolTip": "DigiClinicApi\\Interfaces\\IClinicServiceService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:26:31.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "AddDoctorConclusionRequest.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\AddDoctorConclusionRequest.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Requests\\AddDoctorConclusionRequest.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\AddDoctorConclusionRequest.cs",
+              "RelativeToolTip": "DigiClinicApi\\Requests\\AddDoctorConclusionRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:33:00.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "UpdateAppointmentStatusRequest.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\UpdateAppointmentStatusRequest.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Requests\\UpdateAppointmentStatusRequest.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\UpdateAppointmentStatusRequest.cs",
+              "RelativeToolTip": "DigiClinicApi\\Requests\\UpdateAppointmentStatusRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:32:31.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "ITimeSlotService.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Interfaces\\ITimeSlotService.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Interfaces\\ITimeSlotService.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Interfaces\\ITimeSlotService.cs",
+              "RelativeToolTip": "DigiClinicApi\\Interfaces\\ITimeSlotService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:28:53.797Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "CreateTimeSlotRequest.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\CreateTimeSlotRequest.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Requests\\CreateTimeSlotRequest.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\CreateTimeSlotRequest.cs",
+              "RelativeToolTip": "DigiClinicApi\\Requests\\CreateTimeSlotRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:28:27.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "UpdateServiceRequest.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\UpdateServiceRequest.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Requests\\UpdateServiceRequest.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\UpdateServiceRequest.cs",
+              "RelativeToolTip": "DigiClinicApi\\Requests\\UpdateServiceRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:25:40.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "CreateServiceRequest.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\CreateServiceRequest.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Requests\\CreateServiceRequest.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\CreateServiceRequest.cs",
+              "RelativeToolTip": "DigiClinicApi\\Requests\\CreateServiceRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:25:24.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "SpecializationsController.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Controllers\\SpecializationsController.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Controllers\\SpecializationsController.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Controllers\\SpecializationsController.cs",
+              "RelativeToolTip": "DigiClinicApi\\Controllers\\SpecializationsController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:24:30.41Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "UpdateSpecializationRequest.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\UpdateSpecializationRequest.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Requests\\UpdateSpecializationRequest.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\UpdateSpecializationRequest.cs",
+              "RelativeToolTip": "DigiClinicApi\\Requests\\UpdateSpecializationRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:23:10.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "ISpecializationService.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Interfaces\\ISpecializationService.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Interfaces\\ISpecializationService.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Interfaces\\ISpecializationService.cs",
+              "RelativeToolTip": "DigiClinicApi\\Interfaces\\ISpecializationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:15:56.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Services\\JwtService.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Services\\JwtService.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Services\\JwtService.cs",
+              "RelativeToolTip": "DigiClinicApi\\Services\\JwtService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T22:11:35.962Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "SpecializationResponse.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Responses\\SpecializationResponse.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Responses\\SpecializationResponse.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Responses\\SpecializationResponse.cs",
+              "RelativeToolTip": "DigiClinicApi\\Responses\\SpecializationResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:14:47.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Interfaces\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "DigiClinicApi\\Interfaces\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T22:13:16.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "DoctorDetailsResponse.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Responses\\DoctorDetailsResponse.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Responses\\DoctorDetailsResponse.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Responses\\DoctorDetailsResponse.cs",
+              "RelativeToolTip": "DigiClinicApi\\Responses\\DoctorDetailsResponse.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwA4AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:15:27.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "DoctorCardResponse.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Responses\\DoctorCardResponse.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Responses\\DoctorCardResponse.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Responses\\DoctorCardResponse.cs",
+              "RelativeToolTip": "DigiClinicApi\\Responses\\DoctorCardResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:15:03.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "CreateDoctorRequest.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\CreateDoctorRequest.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Requests\\CreateDoctorRequest.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\CreateDoctorRequest.cs",
+              "RelativeToolTip": "DigiClinicApi\\Requests\\CreateDoctorRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T01:13:37.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "AuthResponse.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Responses\\AuthResponse.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Responses\\AuthResponse.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Responses\\AuthResponse.cs",
+              "RelativeToolTip": "DigiClinicApi\\Responses\\AuthResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T22:12:52.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "RegisterRequest.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\RegisterRequest.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Requests\\RegisterRequest.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\RegisterRequest.cs",
+              "RelativeToolTip": "DigiClinicApi\\Requests\\RegisterRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T22:11:58.559Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Requests\\LoginRequest.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Requests\\LoginRequest.cs",
+              "RelativeToolTip": "DigiClinicApi\\Requests\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T22:12:24.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "IJwtService.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Interfaces\\IJwtService.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Interfaces\\IJwtService.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Interfaces\\IJwtService.cs",
+              "RelativeToolTip": "DigiClinicApi\\Interfaces\\IJwtService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T22:11:10.66Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "20260416220715_first.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\source\\repos\\DigiClinicApi\\DigiClinicApi\\Migrations\\20260416220715_first.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\DigiClinicApi\\DigiClinicApi\\Migrations\\20260416220715_first.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\source\\repos\\DigiClinicApi\\DigiClinicApi\\Migrations\\20260416220715_first.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\DigiClinicApi\\DigiClinicApi\\Migrations\\20260416220715_first.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T22:07:15.508Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "PatientProfile.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Models\\PatientProfile.cs",
+              "RelativeDocumentMoniker": "DigiClinicApi\\Models\\PatientProfile.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\Models\\PatientProfile.cs",
+              "RelativeToolTip": "DigiClinicApi\\Models\\PatientProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T20:39:42.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "20260416204851_first.cs",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\source\\repos\\DigiClinicApi\\DigiClinicApi\\Migrations\\20260416204851_first.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\DigiClinicApi\\DigiClinicApi\\Migrations\\20260416204851_first.cs",
+              "ToolTip": "C:\\Users\\uryuqq\\source\\repos\\DigiClinicApi\\DigiClinicApi\\Migrations\\20260416204851_first.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\DigiClinicApi\\DigiClinicApi\\Migrations\\20260416204851_first.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T20:48:52.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\appsettings.json",
+              "RelativeDocumentMoniker": "DigiClinicApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\appsettings.json",
+              "RelativeToolTip": "DigiClinicApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-16T20:46:33.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "DigiClinicApi.csproj",
+              "DocumentMoniker": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\DigiClinicApi.csproj",
+              "RelativeDocumentMoniker": "DigiClinicApi\\DigiClinicApi.csproj",
+              "ToolTip": "C:\\Users\\uryuqq\\Desktop\\kursach\\digi\\DigiClinicApi\\DigiClinicApi\\DigiClinicApi.csproj",
+              "RelativeToolTip": "DigiClinicApi\\DigiClinicApi.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-16T20:33:59.024Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

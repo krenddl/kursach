@@ -1,0 +1,76 @@
+@page "/messages"
+@using BlazorPractice1.ApiRequests
+@using BlazorPractice1.ApiRequests.Model
+@using BlazorPractice1.ApiRequests.Services
+@inject AuthService AuthService
+@inject ApiRequest ApiRequest
+@inject NavigationManager Navigation
+
+<PageTitle>Диалоги</PageTitle>
+
+<div class="messages-page">
+    <div class="movies-topbar">
+        <div>
+            <h1 class="movies-title">Личные сообщения</h1>
+            <p class="movies-subtitle">Выберите пользователя, чтобы открыть чат один на один</p>
+        </div>
+    </div>
+
+    @if (!string.IsNullOrWhiteSpace(errorMessage))
+    {
+        <div class="alert alert-error">@errorMessage</div>
+    }
+    else if (users.Count == 0)
+    {
+        <div class="card messages-empty-card">
+            <p class="messages-empty-text">Пока нет других пользователей для переписки.</p>
+        </div>
+    }
+    else
+    {
+        <div class="messages-user-list">
+            @foreach (var u in users)
+            {
+                <a href="@($"/privatechat/{u.id_User}")" class="messages-user-row card">
+                    <div class="messages-user-avatar" aria-hidden="true">
+                        @RowLetter(u.Name)
+                    </div>
+                    <div class="messages-user-meta">
+                        <span class="messages-user-name">@(string.IsNullOrWhiteSpace(u.Name) ? $"Пользователь {u.id_User}" : u.Name)</span>
+                        <span class="messages-user-role">@u.Role</span>
+                    </div>
+                    <span class="messages-user-chevron">→</span>
+                </a>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    private List<ChatUserDirectoryEntry> users = new();
+    private string? errorMessage;
+
+    private static string RowLetter(string? name) =>
+        string.IsNullOrWhiteSpace(name) ? "?" : char.ToUpperInvariant(name.Trim()[0]).ToString();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await AuthService.LoadSessionAsync();
+
+        if (!AuthService.IsAuthenticated || string.IsNullOrWhiteSpace(AuthService.Token))
+        {
+            Navigation.NavigateTo("/login");
+            return;
+        }
+
+        var res = await ApiRequest.GetUsersForChatAsyncResponse(AuthService.Token);
+
+        if (!res.status || res.users == null)
+        {
+            errorMessage = "Не удалось загрузить список пользователей.";
+            return;
+        }
+
+        users = res.users;
+    }
+}

@@ -1,0 +1,167 @@
+﻿@page "/admin/movies/edit/{id:int}"
+@using BlazorPractice1.ApiRequests.Model
+@using BlazorPractice1.ApiRequests.Services
+@using Microsoft.AspNetCore.Components.Forms
+@inject BlazorPractice1.ApiRequests.ApiRequest ApiRequest
+@inject AuthService AuthService
+@inject NavigationManager Navigation
+
+<div class="form-shell">
+    <div class="card">
+        <h2 class="form-title">Редактирование фильма</h2>
+        <p class="form-subtitle">Изменение данных фильма</p>
+
+        @if (!string.IsNullOrWhiteSpace(errorMessage))
+        {
+            <div class="alert alert-error">@errorMessage</div>
+        }
+
+        @if (!string.IsNullOrWhiteSpace(successMessage))
+        {
+            <div class="alert alert-success">@successMessage</div>
+        }
+
+        <div class="form-group">
+            <label class="form-label">Название</label>
+            <input class="form-control" @bind="editMovie.Name" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Описание</label>
+            <textarea class="form-textarea" @bind="editMovie.Description"></textarea>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label class="form-label">Жанр</label>
+                <select class="form-select" @bind="editMovie.id_Genre">
+                    @foreach (var genre in genres)
+                    {
+                        <option value="@genre.id_Genre">@genre.name</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Рейтинг</label>
+                <input class="form-control" type="number" step="0.1" @bind="editMovie.Rating" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Дата</label>
+            <input class="form-control" type="date" @bind="editMovie.Date" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Новое фото</label>
+            <InputFile OnChange="HandleFileSelected" />
+        </div>
+
+        <div class="form-actions">
+            <button class="btn btn-primary" @onclick="SaveMovie">Сохранить</button>
+            <button class="btn btn-secondary" @onclick='() => Navigation.NavigateTo("/movies")'>Назад</button>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public int id { get; set; }
+
+    private UpdateMovieRequest editMovie = new();
+    private List<GenreResponse> genres = new();
+    private IBrowserFile? selectedFile;
+    private string? errorMessage;
+    private string? successMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await AuthService.LoadSessionAsync();
+
+        if (!AuthService.IsAuthenticated || AuthService.CurrentUser?.Role_Id != 1)
+        {
+            Navigation.NavigateTo("/movies");
+            return;
+        }
+
+        await LoadGenres();
+        await LoadMovie();
+    }
+
+    private async Task LoadGenres()
+    {
+        if (string.IsNullOrWhiteSpace(AuthService.Token))
+            return;
+
+        var result = await ApiRequest.GetAllGenres(AuthService.Token);
+
+        if (result != null && result.status && result.genres != null)
+        {
+            genres = result.genres;
+        }
+    }
+
+    private async Task LoadMovie()
+    {
+        if (string.IsNullOrWhiteSpace(AuthService.Token))
+        {
+            errorMessage = "Токен не найден";
+            return;
+        }
+
+        var result = await ApiRequest.GetMovieByIdResponse(id, AuthService.Token);
+
+        if (result == null ||  !result.status || result.movie == null)
+        {
+            errorMessage = "Фильм не найден";
+            return;
+        }
+
+        editMovie.id_Movie = result.movie.id_Movie;
+        editMovie.Name = result.movie.name;
+        editMovie.Description = result.movie.description;
+        editMovie.id_Genre = result.movie.id_Genre;
+        editMovie.Date = result.movie.date;
+        editMovie.Rating = result.movie.rating;
+        editMovie.img = result.movie.img;
+    }
+    private void HandleFileSelected(InputFileChangeEventArgs e)
+    {
+        selectedFile = e.File;
+    }
+
+    private async Task SaveMovie()
+    {
+        errorMessage = null;
+        successMessage = null;
+
+        if (string.IsNullOrWhiteSpace(AuthService.Token))
+        {
+            errorMessage = "Токен не найден";
+            return;
+        }
+
+        if (selectedFile != null)
+        {
+            var uploadResult = await ApiRequest.UploadMovieImageAsync(selectedFile, AuthService.Token);
+
+            if (uploadResult == null ||  !uploadResult.status || string.IsNullOrWhiteSpace(uploadResult.img))
+            {
+                errorMessage = "Ошибка загрузки изображения";
+                return;
+            }
+
+            editMovie.img = uploadResult.img;
+        }
+
+        var result = await ApiRequest.UpdateMovieAsyncResponse(editMovie, AuthService.Token);
+
+        if (result == null || !result.status)
+        {
+            errorMessage = "Не удалось обновить фильм";
+            return;
+        }
+
+        successMessage = "Фильм обновлён";
+    }
+}

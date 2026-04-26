@@ -1,0 +1,90 @@
+﻿@page "/movies/{id:int}"
+@using BlazorPractice1.ApiRequests
+@using BlazorPractice1.ApiRequests.Model
+@using BlazorPractice1.ApiRequests.Services
+@inject ApiRequest ApiRequest
+@inject AuthService AuthService
+@inject NavigationManager Navigation
+
+<div class="movie-details-page">
+    @if (!string.IsNullOrWhiteSpace(errorMessage))
+    {
+        <div class="alert alert-error">@errorMessage</div>
+    }
+    else if (movie == null)
+    {
+        <div class="card">Загрузка...</div>
+    }
+    else
+    {
+        <div class="movie-details-grid">
+            <div class="movie-details-poster">
+                @if (!string.IsNullOrWhiteSpace(movie.img))
+                {
+                    <img src="@($"http://localhost:5126{movie.img}")" alt="@movie.name" />
+                }
+                else
+                {
+                    <div class="movie-card-poster">
+                        <span>No image</span>
+                    </div>
+                }
+            </div>
+
+            <div class="movie-details-body">
+                <div class="card">
+                    <h1 class="page-title">@movie.name</h1>
+                    <p class="page-subtitle">Подробная информация о фильме</p>
+
+                    <div class="movie-modal-meta mt-20">
+                        <span class="movie-card-genre">@movie.Genre?.name</span>
+                        <span class="movie-card-rating">⭐ @movie.rating</span>
+                        <span>@movie.date.ToString("dd.MM.yyyy")</span>
+                    </div>
+
+                    <div class="movie-details-description mt-20">
+                        @movie.description
+                    </div>
+
+                    <div class="form-actions">
+                        <button class="btn btn-primary" @onclick='() => Navigation.NavigateTo($"/moviechat/{movie.id_Movie}")'>
+                            Перейти в чат
+                        </button>
+
+                        <button class="btn btn-outline" @onclick='() => Navigation.NavigateTo("/movies")'>
+                            Назад
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter] public int id { get; set; }
+
+    private MovieResponse? movie;
+    private string? errorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await AuthService.LoadSessionAsync();
+
+        if (string.IsNullOrWhiteSpace(AuthService.Token))
+        {
+            errorMessage = "Токен не найден";
+            return;
+        }
+
+        var result = await ApiRequest.GetMovieByIdResponse(id, AuthService.Token);
+
+        if (result == null || !result.status || result.movie == null)
+        {
+            errorMessage = "Не удалось загрузить фильм";
+            return;
+        }
+
+        movie = result.movie;
+    }
+}

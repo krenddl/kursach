@@ -1,0 +1,45 @@
+﻿@page "/"
+@using BlazorPractice1.ApiRequests.Services
+@inject AuthService AuthService
+@inject NavigationManager Navigation
+
+<div class="home-shell">
+    <div class="card home-card">
+        <h1 class="page-title">Кино-дайджест</h1>
+        <p class="page-subtitle">
+            Современный каталог фильмов с удобным интерфейсом, профилем и чатом для обсуждения.
+        </p>
+
+        @if (isLoading)
+        {
+            <p class="mt-20">Загрузка...</p>
+        }
+    </div>
+</div>
+
+@code {
+    private bool isLoading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            await AuthService.LoadSessionAsync();
+
+            if (AuthService.IsAuthenticated)
+                Navigation.NavigateTo("/profile");
+            else
+                Navigation.NavigateTo("/login");
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    public async Task Logout()
+    {
+        await AuthService.Logout();
+        Navigation.NavigateTo("/login");
+    }
+}

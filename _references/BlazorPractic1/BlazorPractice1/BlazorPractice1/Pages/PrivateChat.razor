@@ -1,0 +1,398 @@
+@page "/privatechat/{userId:int}"
+@implements IAsyncDisposable
+
+@using BlazorPractice1.ApiRequests
+@using BlazorPractice1.ApiRequests.Model
+@using BlazorPractice1.ApiRequests.Services
+@using Microsoft.AspNetCore.SignalR.Client
+@using System.Net.Http.Json
+@using System.Text.Json
+
+<PageTitle>Личный чат</PageTitle>
+
+<div class="chat-page private-chat-page">
+    <div class="movies-topbar private-chat-head">
+        <div>
+            <a href="/messages" class="private-chat-back">← К диалогам</a>
+            <h2 class="page-title">@PartnerLabel</h2>
+            <p class="page-subtitle">Личные сообщения</p>
+        </div>
+    </div>
+
+    @if (!string.IsNullOrWhiteSpace(hubError))
+    {
+        <div class="alert alert-error mb-20">@hubError</div>
+    }
+
+    <div class="card chat-card">
+        <div class="chat-box">
+            @if (messages.Count == 0)
+            {
+                <div class="chat-empty">Напишите первое сообщение</div>
+            }
+            else
+            {
+                @foreach (var m in messages)
+                {
+                    var isMine = AuthService.CurrentUser != null && m.senderId == AuthService.CurrentUser.id_User;
+
+                    <div class="chat-message @(isMine ? "mine" : "other")">
+                        <div class="chat-message-top">
+                            <span class="chat-user">@(isMine ? "Вы" : PartnerLabel)</span>
+                        </div>
+
+                        @if (!string.IsNullOrWhiteSpace(m.text))
+                        {
+                            <div>@m.text</div>
+                        }
+
+                        @if (!string.IsNullOrWhiteSpace(m.imageUrl))
+                        {
+                            <img class="chat-image" src="@($"http://localhost:5126{m.imageUrl}")" alt="" />
+                        }
+
+                        @if (m.isEdited)
+                        {
+                            <div class="chat-edited">(изменено)</div>
+                        }
+
+                        @if (isMine)
+                        {
+                            <div class="chat-actions">
+                                <button type="button" class="btn btn-outline btn-sm" @onclick="() => StartEdit(m)">Редактировать</button>
+                                <button type="button" class="btn btn-danger btn-sm" @onclick="() => DeleteMessage(m.id_PrivateMessage)">Удалить</button>
+                            </div>
+                        }
+                    </div>
+                }
+            }
+        </div>
+    </div>
+
+    <div class="card chat-card mt-20">
+        <div class="chat-input-row">
+            <input class="form-control" @bind="text" placeholder="Сообщение…" />
+            <InputFile @key="fileInputKey" OnChange="OnFileChange" accept="image/*" />
+            <button type="button" class="btn btn-primary" @onclick="SendMessage" disabled="@(AuthService.CurrentUser == null)">Отправить</button>
+        </div>
+
+        @if (editingMessage != null)
+        {
+            <div class="chat-edit-panel">
+                <div class="form-group">
+                    <label class="form-label">Редактирование</label>
+                    <input class="form-control" @bind="editText" />
+                </div>
+                <div class="form-group">
+                    <InputFile @key="editFileInputKey" OnChange="OnEditFileChange" accept="image/*" />
+                </div>
+                <label class="form-label" style="display:flex; gap:8px; align-items:center;">
+                    <input type="checkbox" @bind="removeImage" />
+                    удалить фото
+                </label>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-success" @onclick="SaveEdit">Сохранить</button>
+                    <button type="button" class="btn btn-outline" @onclick="CancelEdit">Отмена</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    private static readonly JsonSerializerOptions JsonOptions = new() { PropertyNameCaseInsensitive = true };
+
+    [Parameter] public int userId { get; set; }
+
+    [Inject] private NavigationManager Nav { get; set; } = default!;
+    [Inject] private HttpClient Http { get; set; } = default!;
+    [Inject] private AuthService AuthService { get; set; } = default!;
+    [Inject] private ApiRequest ApiRequest { get; set; } = default!;
+
+    private int fileInputKey = 0;
+    private int editFileInputKey = 0;
+
+    private const long MaxImageSize = 15 * 1024 * 1024; 
+
+    private HubConnection? hub;
+
+    private List<PrivateMessageModel> messages = new();
+    private string text = string.Empty;
+    private IBrowserFile? file;
+    private PrivateMessageModel? editingMessage;
+    private string editText = string.Empty;
+    private IBrowserFile? editFile;
+    private bool removeImage;
+    private string? hubError;
+    private string PartnerLabel { get; set; } = "Собеседник";
+
+    protected override async Task OnParametersSetAsync()
+    {
+        hubError = null;
+        await AuthService.LoadSessionAsync();
+
+        if (!AuthService.IsAuthenticated || AuthService.CurrentUser == null || string.IsNullOrWhiteSpace(AuthService.Token))
+        {
+            Nav.NavigateTo("/login");
+            return;
+        }
+
+        if (userId == AuthService.CurrentUser.id_User)
+        {
+            Nav.NavigateTo("/messages");
+            return;
+        }
+
+        var directory = await ApiRequest.GetUsersForChatAsyncResponse(AuthService.Token);
+        var entry = directory.users?.FirstOrDefault(u => u.id_User == userId);
+        PartnerLabel = string.IsNullOrWhiteSpace(entry?.Name) ? $"Пользователь {userId}" : entry!.Name!;
+
+        if (hub is { State: HubConnectionState.Connected })
+            return;
+
+        await DisposeHubAsync();
+
+        Http.DefaultRequestHeaders.Remove("Authorization");
+        Http.DefaultRequestHeaders.Add("Authorization", AuthService.Token);
+
+        hub = new HubConnectionBuilder()
+    .WithUrl($"http://localhost:5126/chathub?token={Uri.EscapeDataString(AuthService.Token!)}")
+    .WithAutomaticReconnect()
+    .Build();
+
+        hub.On<PrivateMessageModel>("ReceivePrivateMessage", msg =>
+            InvokeAsync(() =>
+            {
+                if (IsParticipant(msg))
+                {
+                    messages.Add(msg);
+                    StateHasChanged();
+                }
+            }));
+
+        hub.On<string>("ChatError", error => InvokeAsync(() => { hubError = error; StateHasChanged(); }));
+
+        hub.On<PrivateMessageModel>("UpdatePrivateMessage", msg =>
+            InvokeAsync(() =>
+            {
+                var m = messages.FirstOrDefault(x => x.id_PrivateMessage == msg.id_PrivateMessage);
+                if (m != null)  
+                {
+                    m.text = msg.text;
+                    m.imageUrl = msg.imageUrl;
+                    m.isEdited = msg.isEdited;
+                    StateHasChanged();
+                }
+            }));
+
+        hub.On<int>("DeletePrivateMessage", id =>
+            InvokeAsync(() =>
+            {
+                var m = messages.FirstOrDefault(x => x.id_PrivateMessage == id);
+                if (m != null)
+                {
+                    messages.Remove(m);
+                    StateHasChanged();
+                }
+            }));
+
+        try
+        {
+            await hub.StartAsync();
+            var me = AuthService.CurrentUser.id_User;
+            await hub.InvokeAsync("JoinPrivateChat", me, userId);
+            await LoadMessages();
+        }
+        catch (Exception ex)
+        {
+            hubError = $"Не удалось подключиться: {ex.Message}";
+        }
+    }
+
+    private bool IsParticipant(PrivateMessageModel msg)
+    {
+        if (AuthService.CurrentUser == null) return false;
+        var me = AuthService.CurrentUser.id_User;
+        return (msg.senderId == me && msg.receiverId == userId) ||
+               (msg.senderId == userId && msg.receiverId == me);
+    }
+
+    private async Task LoadMessages()
+    {
+        messages = new List<PrivateMessageModel>();
+
+        if (AuthService.CurrentUser == null || hub == null)
+            return;
+
+        try
+        {
+            var me = AuthService.CurrentUser.id_User;
+            messages = await hub.InvokeAsync<List<PrivateMessageModel>>(
+                "GetPrivateMessagesAsync",
+                me,
+                userId
+            );
+        }
+        catch (Exception ex)
+        {
+            hubError = $"Ошибка загрузки сообщений: {ex.Message}";
+        }
+    }
+
+    private async Task SendMessage()
+    {
+        if (AuthService.CurrentUser == null || hub == null)
+            return;
+
+        try
+        {
+            var (base64, fileName) = await ReadFileAsBase64Async(file);
+
+            await hub.InvokeAsync("SendPrivateMessage", new PrivateMessageModel
+            {
+                senderId = AuthService.CurrentUser.id_User,
+                receiverId = userId,
+                text = text,
+                imageBase64 = base64,
+                imageUrl = fileName
+            });
+
+            text = string.Empty;
+            file = null;
+            hubError = null;
+            fileInputKey++;
+        }
+        catch (Exception ex)
+        {
+            hubError = $"Ошибка отправки: {ex.Message}";
+        }
+    }
+
+    private async Task DeleteMessage(int id)
+    {
+        if (hub == null)
+            return;
+
+        try
+        {
+            await hub.InvokeAsync("DeletePrivateMessage", id);
+        }
+        catch (Exception ex)
+        {
+            hubError = $"Ошибка удаления: {ex.Message}";
+        }
+    }
+
+    private void StartEdit(PrivateMessageModel m)
+    {
+        editingMessage = m;
+        editText = m.text ?? string.Empty;
+    }
+
+    private async Task SaveEdit()
+    {
+        if (editingMessage == null || hub == null)
+            return;
+
+        try
+        {
+            var (base64, fileName) = await ReadFileAsBase64Async(editFile);
+
+            await hub.InvokeAsync("EditPrivateMessage", new UpdatePrivateMessageRequest
+            {
+                id_PrivateMessage = editingMessage.id_PrivateMessage,
+                text = editText,
+                imageBase64 = base64,
+                imageFileName = fileName,
+                removeCurrentImage = removeImage
+            });
+
+            editingMessage = null;
+            removeImage = false;
+            editFile = null;
+            hubError = null;
+            editFileInputKey++;
+        }
+        catch (Exception ex)
+        {
+            hubError = $"Ошибка редактирования: {ex.Message}";
+        }
+    }
+
+    private void CancelEdit()
+    {
+        editingMessage = null;
+        removeImage = false;
+        editFile = null;
+    }
+
+    private void OnFileChange(InputFileChangeEventArgs e)
+    {
+        var selected = e.File;
+
+        if (selected.Size > MaxImageSize)
+        {
+            hubError = "Файл слишком большой. Максимум 15 MB.";
+            file = null;
+            return;
+        }
+
+        hubError = null;
+        file = selected;
+    }
+
+    private void OnEditFileChange(InputFileChangeEventArgs e)
+    {
+        var selected = e.File;
+
+        if (selected.Size > MaxImageSize)
+        {
+            hubError = "Файл слишком большой. Максимум 15 MB.";
+            editFile = null;
+            return;
+        }
+
+        hubError = null;
+        editFile = selected;
+    }
+
+    private async Task DisposeHubAsync()
+    {
+        if (hub is null)
+            return;
+
+        try
+        {
+            if (AuthService.CurrentUser != null)
+                await hub.InvokeAsync("LeavePrivateChat", AuthService.CurrentUser.id_User, userId);
+        }
+        catch
+        {
+            
+        }
+
+        await hub.DisposeAsync();
+        hub = null;
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        await DisposeHubAsync();
+    }
+
+    private async Task<(string? Base64, string? FileName)> ReadFileAsBase64Async(IBrowserFile? selectedFile)
+    {
+        if (selectedFile == null)
+            return (null, null);
+
+        using var stream = selectedFile.OpenReadStream(maxAllowedSize: MaxImageSize);
+        using var ms = new MemoryStream();
+        await stream.CopyToAsync(ms);
+
+        var bytes = ms.ToArray();
+        var base64 = Convert.ToBase64String(bytes);
+
+        return (base64, selectedFile.Name);
+    }
+
+}

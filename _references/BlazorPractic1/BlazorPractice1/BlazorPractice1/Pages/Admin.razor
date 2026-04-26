@@ -1,0 +1,550 @@
+﻿@page "/admin/users"
+@using BlazorPractice1.ApiRequests
+@using BlazorPractice1.ApiRequests.Model
+@using BlazorPractice1.ApiRequests.Services
+
+@inject AuthService AuthService
+@inject NavigationManager Navigation
+@inject ApiRequest ApiRequest
+
+<h3>Users</h3>
+
+@if (!string.IsNullOrWhiteSpace(errorMessage))
+{
+    <p>@errorMessage</p>
+}
+else if(users == null)
+{
+    <p>Пользователей нет</p>
+}
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Role</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in users)
+            {
+                <tr>
+                    <td>@user.id_User</td>
+                    <td>@if (editingUserId == user.id_User)
+                        {
+                            <input @bind="updateUser.Email"/>
+                        }
+                        else
+                        {
+                            @user.Email;
+                        }
+                    </td>
+                    <td>
+                        @if (editingUserId == user.id_User)
+                        {
+                            <input @bind="updateUser.Name" />
+                        }
+                        else
+                        {
+                            @user.Name;
+                        }
+                    </td>
+                    <td>
+                        @if (editingUserId == user.id_User)
+                        {
+                            <input @bind="updateUser.Description" />
+                        }
+                        else
+                        {
+                            @user.Description
+                            ;
+                        }
+                    </td>
+                    <td>
+                        @if (editingUserId == user.id_User)
+                        {
+                            @if(updateUser.id_User == AuthService.CurrentUser.id_User)
+                            {
+                                <select @bind="updateUser.Role_id">
+                                    <option value="1">Admin</option>
+                                </select>
+                            }
+                            else
+                            {
+                                <select @bind="updateUser.Role_id">
+                                    <option value="1">Admin</option>
+                                    <option value="2">User</option>
+                                </select>
+                            }
+                            
+                        }
+                        else
+                        {
+                            @user.Role;
+                        }
+                    </td>
+                    <td>
+                        @if(editingUserId == user.id_User)
+                        {
+                            <input type="password" placeholder="New password"
+                                @bind="updateUser.Password"/>
+                        }
+                    </td>
+                    <td>
+                        @if(editingUserId == user.id_User)
+                        {
+                            <button @onclick="SaveEdit">Save</button>
+                            <button @onclick="CancelEdit">Cancel</button>
+                        }
+                        else
+                        {
+                            <button @onclick="() => Edit(user)">Update</button>
+                            <button disabled="@(user.id_User == AuthService.CurrentUser?.id_User || user.Role_Id == 1)"
+                                    @onclick="() => DeleteUser(user.id_User)">
+                                Delete
+                            </button>
+                        }
+                    </td>
+                </tr>
+                
+            }
+        </tbody>
+    </table>
+
+    <h4>Create new User</h4>
+
+    
+
+    <div>
+        <input @bind="newUser.Email" placeholder="Email"/>
+        <input @bind="newUser.Password" placeholder="Password" type="password" />
+        <input @bind="newUser.Name" placeholder="Name" />
+        <input @bind="newUser.Description" placeholder="Description" />
+        <select @bind="newUser.Role_Id">
+            <option value="1">Admin</option>
+            <option value="2">User</option>
+        </select>
+    </div>
+    <div>
+        <button @onclick="CreateUser">Create</button>
+    </div>
+
+    @if (!string.IsNullOrWhiteSpace(succesMessage))
+    {
+        @succesMessage;
+    }
+}
+
+
+@code{
+    private List<UserResponse> users = new List<UserResponse>();
+    private CreateUserRequest newUser = new CreateUserRequest();
+    private UpdateUserRequest updateUser = new UpdateUserRequest();
+    private string? errorMessage;
+    private string? succesMessage;
+    private int? editingUserId = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await AuthService.LoadSessionAsync();
+        if(!AuthService.IsAuthenticated || AuthService.CurrentUser == null)
+        {
+            Navigation.NavigateTo("/login");
+            return;
+        }
+        else if(AuthService.CurrentUser.Role_Id == 2)
+        {
+            Navigation.NavigateTo("/profile");
+            return;
+        }
+
+        await LoadUsers();
+
+
+    }
+
+    private async Task DeleteUser(int id)
+    {
+        if (string.IsNullOrWhiteSpace(AuthService.Token))
+        {
+            errorMessage = "Токен не найден";
+            return;
+        }
+
+        var result = await ApiRequest.DeleteUserAsync(id, AuthService.Token);
+
+        if (result == null || !result.status)
+        {
+            errorMessage = "Не удалось удалить пользователя";
+            return;
+        }
+
+        await LoadUsers();
+    }
+
+    private async Task CreateUser()
+    {
+        errorMessage = null;
+        succesMessage = null;
+        if(string.IsNullOrWhiteSpace(AuthService.Token))
+        {
+            errorMessage = "Токен не найден";
+            return;
+        }
+        var result = await ApiRequest.CreateUserAsyncResponse(newUser, AuthService.Token);
+
+        if(result == null || !result.status || result.user == null)
+        {
+            errorMessage = "Не удалось создать пользователя";
+        }
+
+        succesMessage = "Пользователь создан";
+
+        newUser = new CreateUserRequest();
+
+        await LoadUsers();
+    }
+
+    private async Task LoadUsers()
+    {
+        var result = await ApiRequest.GetAllUsersAsyncResponse(AuthService.Token);
+        if (result == null || !result.status || result.users == null)
+        {
+            errorMessage = "Не удалось загрузить пользователей";
+            return;
+        }
+
+        users = result.users;
+    }
+
+    private void Edit(UserResponse user)
+    {
+        editingUserId = user.id_User;
+        updateUser = new UpdateUserRequest
+            {
+                id_User = user.id_User,
+                Email = user.Email,
+                Name = user.Name,
+                Description = user.Description,
+                Password = null,
+                Role_id = user.Role_Id
+            };
+
+        errorMessage = null;
+        succesMessage = null;
+    }
+
+    private void CancelEdit()
+    {
+        editingUserId = null;
+        updateUser = new UpdateUserRequest();
+    }
+
+    private async Task SaveEdit()
+    {
+        errorMessage = null;
+        succesMessage = null;
+
+
+        if (string.IsNullOrWhiteSpace(AuthService.Token))
+        {
+            errorMessage = "Токен не найден";
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(updateUser.Password))
+        {
+            updateUser.Password = null;
+        }
+
+        var result = await ApiRequest.UpdateUserAsyncResponse(updateUser, AuthService.Token);
+
+        if(result == null || !result.status || result.user == null)
+        {
+            errorMessage = "Не удалось обновить пользователя";
+            return;
+        }
+
+        succesMessage = "Пользователь обновлен";
+        editingUserId = null;
+        updateUser = new UpdateUserRequest();
+
+        await LoadUsers();
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@* @page "/admin"
+@using BlazorPractice1.ApiRequests
+@using BlazorPractice1.ApiRequests.Model
+@using BlazorPractice1.ApiRequests.Services
+@inject NavigationManager Nav
+
+<PageTitle>Admin</PageTitle>
+
+@if (userService.CurrentUser == null)
+{
+    <p>Сначала войди.</p>
+}
+else if (!userService.IsAdmin)
+{
+    <p>Нет доступа (только Admin).</p>
+}
+else
+{
+    <h1>Admin panel</h1>
+
+    <button type="button" @onclick="LoadUsers">Обновить</button>
+    <p>@msg</p>
+
+    <table class="table table-bordered">
+        <thead class="alert-dark">
+            <tr>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Role_Id</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (users == null)
+            {
+                <tr><td colspan="6">Loading...</td></tr>
+            }
+            else if (!users.Any())
+            {
+                <tr><td colspan="6">No users</td></tr>
+            }
+            else
+            {
+                @if (isCreating)
+                {
+                    <tr>
+                        <td>New</td>
+                        <td><input @bind="addNewUser.Email" /></td>
+                        <td><input @bind="addNewUser.Password" /></td>
+                        <td><input @bind="addNewUser.Name" /></td>
+                        <td><input @bind="addNewUser.Description" /></td>
+                        <td><input type="number" @bind="addNewUser.Role_id" /></td>
+                        <td>
+                            <button @onclick="SaveAddNewUser">Save</button>
+                            <button @onclick="CancelEdit">Cancel</button>
+                        </td>
+
+                    </tr>
+                }
+                @foreach (var u in users)
+                {
+                    <tr>
+                        <td>@u.id_User</td>
+
+                        @if (editingId == u.id_User)
+                        {
+                            <td><input @bind="editUser.Email" /></td>
+                            <td><input @bind="editUser.Password" /></td>
+                            <td><input @bind="editUser.Name" /></td>
+                            <td><input @bind="editUser.Description" /></td>
+                            <td><input type="number" @bind="editUser.Role_id" /></td>
+                            <td>
+                                <button @onclick="SaveEdit">Save</button>
+                                <button @onclick="CancelEdit">Cancel</button>
+                            </td>
+
+                        }
+                        else
+                        {
+                            <td>@u.Email</td>
+                            <td>@u.Password</td>
+                            <td>@u.Name</td>
+                            <td>@u.Description</td>
+                            <td>@u.Role_Id</td>
+
+                            <td>
+                                <button @onclick="() => EditUser(u)">Edit</button>
+                            </td>
+
+                            <td>
+                                <button @onclick="() => Delete(u.id_User)">Delete</button>
+                            </td>
+                        }
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+    <button @onclick="AddNewUserAdmin">Добавить пользователя</button>
+}
+
+
+@code {
+    [Inject] private ApiRequest apiRequest { get; set; }
+    [Inject] private UserService userService { get; set; }
+    private AddNewUserRequest addNewUser = new AddNewUserRequest();
+    private int? editingId = null;
+    private UpdateUserRequest editUser = new UpdateUserRequest();
+    private List<User> users;
+    private string msg = "";
+    private bool isCreating = false;
+    private User newUser = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (userService.CurrentUser == null)
+        {
+            Nav.NavigateTo("/login");
+            return;
+        }
+
+        if (!userService.IsAdmin) return;
+
+        await LoadUsers();
+    }
+    private void EditUser(User u)
+    {
+        editingId = u.id_User;
+
+        editUser = new UpdateUserRequest
+            {
+                id_User = u.id_User,
+                Email = u.Email,
+                Password = u.Password,
+                Name = u.Name,
+                Description = u.Description,
+                Role_id = u.Role_Id
+            };
+    }
+    private void CancelEdit()
+    {
+        editingId = null;
+        isCreating = false;
+    }
+    private async Task SaveEdit()
+    {
+        msg = "";
+
+        var res = await apiRequest.UpdateUser(editUser);
+
+        if (res != null && res.status)
+        {
+            msg = "Обновлено";
+            editingId = null;
+            await LoadUsers();
+        }
+        else
+        {
+            msg = "Ошибка обновления";
+        }
+    }
+
+    private async Task LoadUsers()
+    {
+        msg = "";
+        var res = await apiRequest.GetAllUsersAsync();
+
+        if (res != null && res.status && res.user != null)
+            users = res.user;
+        else
+        {
+            users = new List<User>();
+            msg = "Не удалось загрузить пользователей";
+        }
+    }
+
+    private async Task Delete(int id)
+    {
+        msg = "";
+
+        var res = await apiRequest.DeleteUserAsync(id);
+
+        if (res != null && res.status)
+        {
+            msg = "Удалено";
+            await LoadUsers();
+        }
+        else
+        {
+            msg = "Ошибка удаления";
+        }
+    }
+    private void AddNewUserAdmin()
+    {
+        newUser = new User
+            {
+                Role_Id = 2
+            };
+
+        isCreating = true;
+    }
+    private async Task SaveAddNewUser()
+    {
+        msg = "";
+
+        var res = await apiRequest.RegistrationAsync(addNewUser);
+
+        if (res != null && res.status)
+        {
+            msg = "Пользователь создан";
+            isCreating = false;
+            await LoadUsers();
+        }
+        else
+        {
+            msg = "Ошибка создания";
+        }
+    }
+
+} *@

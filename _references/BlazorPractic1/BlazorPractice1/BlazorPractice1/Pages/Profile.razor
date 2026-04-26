@@ -1,0 +1,121 @@
+@page "/profile"
+@using BlazorPractice1.ApiRequests.Model
+@using BlazorPractice1.ApiRequests.Services
+@using static BlazorPractice1.ApiRequests.Model.Auth
+@inject AuthService AuthService
+@inject NavigationManager Navigation
+@inject BlazorPractice1.ApiRequests.ApiRequest ApiRequest
+
+<div class="profile-grid">
+    <div class="card profile-side">
+        <div class="profile-avatar">
+            @GetAvatarLetter(AuthService.CurrentUser?.Name)
+        </div>
+
+        <h3 class="profile-name">@AuthService.CurrentUser?.Name</h3>
+        <div class="profile-role">@AuthService.CurrentUser?.Role</div>
+
+        <button class="btn btn-danger w-100" @onclick="Logout">Выйти</button>
+    </div>
+
+    <div class="card">
+        <h2 class="page-title">Профиль</h2>
+        <p class="page-subtitle">Редактирование личных данных</p>
+
+        @if (!string.IsNullOrWhiteSpace(errorMessage))
+        {
+            <div class="alert alert-error mt-20">@errorMessage</div>
+        }
+
+        @if (!string.IsNullOrWhiteSpace(succesMessage))
+        {
+            <div class="alert alert-success mt-20">@succesMessage</div>
+        }
+
+        <div class="form-group mt-20">
+            <label class="form-label">Email</label>
+            <input class="form-control" @bind="profileRequest.Email" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Имя</label>
+            <input class="form-control" @bind="profileRequest.Name" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Описание</label>
+            <textarea class="form-textarea" @bind="profileRequest.Description"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Новый пароль</label>
+            <input class="form-control" type="password" @bind="profileRequest.Password" placeholder="Оставь пустым, если не меняешь" />
+        </div>
+
+        <div class="form-actions">
+            <button class="btn btn-primary" @onclick="SaveProfile">Сохранить</button>
+        </div>
+    </div>
+</div>
+
+@code {
+    private UpdateProfileRequest profileRequest = new();
+    private string? errorMessage;
+    private string? succesMessage;
+
+    private static string GetAvatarLetter(string? name)
+    {
+        if (string.IsNullOrWhiteSpace(name))
+            return "U";
+        return char.ToUpperInvariant(name.Trim()[0]).ToString();
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await AuthService.LoadSessionAsync();
+
+        if (!AuthService.IsAuthenticated || AuthService.CurrentUser == null)
+        {
+            Navigation.NavigateTo("/login");
+            return;
+        }
+
+        profileRequest.Email = AuthService.CurrentUser.Email;
+        profileRequest.Name = AuthService.CurrentUser.Name;
+        profileRequest.Description = AuthService.CurrentUser.Description;
+    }
+
+    private async Task SaveProfile()
+    {
+        errorMessage = null;
+        succesMessage = null;
+
+        var result = await ApiRequest.UpdateProfileAsyncResponse(profileRequest, AuthService.Token);
+
+        if (result == null || !result.status)
+        {
+            errorMessage = "Не удалось сохранить изменения";
+            return;
+        }
+
+        if (AuthService.CurrentUser != null && result.user != null)
+        {
+            AuthService.CurrentUser.Email = result.user.Email;
+            AuthService.CurrentUser.Name = result.user.Name;
+            AuthService.CurrentUser.Description = result.user.Description;
+            AuthService.CurrentUser.Role_Id = result.user.Role_Id;
+            AuthService.CurrentUser.Role = result.user.Role;
+        }
+
+        succesMessage = "Изменения успешно сохранены";
+
+        if (string.IsNullOrWhiteSpace(profileRequest.Password))
+            profileRequest.Password = null;
+    }
+
+    private async Task Logout()
+    {
+        await AuthService.Logout();
+        Navigation.NavigateTo("/login");
+    }
+}

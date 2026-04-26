@@ -1,0 +1,34 @@
+﻿@* @page "/login"
+@using BlazorPractice1.ApiRequests
+@using BlazorPractice1.ApiRequests.Model
+@using BlazorPractice1.ApiRequests.Services
+@inject NavigationManager Nav
+
+<PageTitle>Login</PageTitle>
+
+<h1>Login</h1>
+<p>@msg</p>
+<input placeholder="Email" @bind="loginRequest.Email" />
+<input placeholder="Password" type="password" @bind="loginRequest.Password" />
+<button @onclick="Login">Войти</button>
+
+@code {
+    private LoginRequest loginRequest = new LoginRequest();
+    private string msg = "";
+    [Inject] private ApiRequest ApiRequest { get; set; }
+    [Inject] private UserService userService { get; set; }
+
+    public async Task Login()
+    {   
+        var login = await ApiRequest.AuthorizeResponse(loginRequest);
+        msg = "Кнопка нажата...";
+        if(login.status && login.user != null)
+        {
+            userService.CurrentUser = login.user;
+            if (userService.IsAdmin)
+                Nav.NavigateTo("/admin");
+            else
+                Nav.NavigateTo("/profile");
+        }
+    }
+} *@

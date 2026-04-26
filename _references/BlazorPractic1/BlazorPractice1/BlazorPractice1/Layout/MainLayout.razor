@@ -1,0 +1,52 @@
+@using BlazorPractice1.ApiRequests.Services
+@inherits LayoutComponentBase
+@inject AuthService AuthService
+@inject NavigationManager Navigation
+
+<div class="layout">
+    <header class="navbar">
+        <div class="container">
+            <a href="/" class="logo">Кино-дайджест</a>
+            <nav class="nav-links">
+                @if (AuthService.IsAuthenticated)
+                {
+                    <a href="/movies" class="nav-link">Фильмы</a>
+                    <a href="/messages" class="nav-link">Сообщения</a>
+                    <a href="/profile" class="nav-link">Профиль</a>
+                    @if (AuthService.CurrentUser?.Role_Id == 1)
+                    {
+                        <a href="/admin" class="nav-link">Админка</a>
+                    }
+                }
+                else
+                {
+                    <a href="/login" class="nav-link">Вход</a>
+                    <a href="/register" class="nav-link">Регистрация</a>
+                }
+            </nav>
+        </div>
+    </header>
+
+    <main class="content">
+        <div class="container">
+            @Body
+        </div>
+    </main>
+</div>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await AuthService.LoadSessionAsync();
+            StateHasChanged();
+        }
+    }
+
+    private async Task LogoutAsync()
+    {
+        await AuthService.Logout();
+        Navigation.NavigateTo("/login");
+    }
+}
