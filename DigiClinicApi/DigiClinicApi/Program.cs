@@ -192,11 +192,12 @@ static string NormalizePostgresConnectionString(string? connectionString)
     var username = Uri.UnescapeDataString(userInfo.ElementAtOrDefault(0) ?? string.Empty);
     var password = Uri.UnescapeDataString(userInfo.ElementAtOrDefault(1) ?? string.Empty);
     var database = uri.AbsolutePath.TrimStart('/');
+    var port = uri.Port > 0 ? uri.Port : 5432;
 
     return string.Join(';', new[]
     {
         $"Host={uri.Host}",
-        $"Port={uri.Port}",
+        $"Port={port}",
         $"Database={database}",
         $"Username={username}",
         $"Password={password}",
