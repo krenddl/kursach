@@ -88,8 +88,12 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
+var databaseConnectionString = NormalizePostgresConnectionString(
+    builder.Configuration.GetConnectionString("DefaultConnection") ??
+    builder.Configuration["DATABASE_URL"]);
+
 builder.Services.AddDbContext<ContextDb>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(databaseConnectionString));
 
 builder.Services.Configure<ForwardedHeadersOptions>(options =>
 {
@@ -171,3 +175,32 @@ using (var scope = app.Services.CreateScope())
 
 await DbSeeder.SeedAsync(app.Services);
 app.Run();
+
+static string NormalizePostgresConnectionString(string? connectionString)
+{
+    if (string.IsNullOrWhiteSpace(connectionString))
+        throw new InvalidOperationException("Database connection string is not configured.");
+
+    if (!connectionString.StartsWith("postgres://", StringComparison.OrdinalIgnoreCase) &&
+        !connectionString.StartsWith("postgresql://", StringComparison.OrdinalIgnoreCase))
+    {
+        return connectionString;
+    }
+
+    var uri = new Uri(connectionString);
+    var userInfo = uri.UserInfo.Split(':', 2);
+    var username = Uri.UnescapeDataString(userInfo.ElementAtOrDefault(0) ?? string.Empty);
+    var password = Uri.UnescapeDataString(userInfo.ElementAtOrDefault(1) ?? string.Empty);
+    var database = uri.AbsolutePath.TrimStart('/');
+
+    return string.Join(';', new[]
+    {
+        $"Host={uri.Host}",
+        $"Port={uri.Port}",
+        $"Database={database}",
+        $"Username={username}",
+        $"Password={password}",
+        "SSL Mode=Require",
+        "Trust Server Certificate=true"
+    });
+}

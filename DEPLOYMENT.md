@@ -93,3 +93,120 @@ npm run build
 ```
 
 SignalR uses the same API base URL, so chat and appointment updates will point to the hosted API automatically.
+
+## Step-by-step for first hosting
+
+Recommended beginner-friendly route:
+
+```text
+API + PostgreSQL: Render
+Frontend: Vercel
+Source code: GitHub
+```
+
+### 1. Push the project to GitHub
+
+Commit only source/config files, not build artifacts:
+
+```powershell
+git add Dockerfile .dockerignore .gitignore render.yaml DEPLOYMENT.md DigiClinicApi/DigiClinicApi/Program.cs digiclinic/digi-clinic-client/vercel.json
+git commit -m "Prepare hosting configuration"
+git push origin main
+```
+
+If your branch is not `main`, push your current branch instead:
+
+```powershell
+git branch --show-current
+```
+
+### 2. Deploy API and database on Render
+
+1. Open Render.
+2. Choose New -> Blueprint.
+3. Connect the GitHub repository.
+4. Render should detect `render.yaml`.
+5. When Render asks for `Frontend__AllowedOrigins__0`, enter this first:
+
+```text
+http://localhost:5173
+```
+
+This is temporary. After Vercel gives you the real frontend URL, update it.
+
+After deploy, check:
+
+```text
+https://your-api.onrender.com/api/health
+```
+
+Expected response:
+
+```json
+{
+  "status": "ok"
+}
+```
+
+### 3. Deploy frontend on Vercel
+
+1. Open Vercel.
+2. Import the same GitHub repository.
+3. Set Root Directory:
+
+```text
+digiclinic/digi-clinic-client
+```
+
+4. Build command:
+
+```text
+npm run build
+```
+
+5. Output directory:
+
+```text
+dist
+```
+
+6. Add environment variable:
+
+```text
+VITE_API_BASE_URL=https://your-api.onrender.com/api
+```
+
+Replace `your-api.onrender.com` with the real Render API URL.
+
+### 4. Fix CORS after Vercel deploy
+
+After Vercel gives you a frontend URL like:
+
+```text
+https://your-project.vercel.app
+```
+
+Open Render -> digiclinic-api -> Environment and set:
+
+```text
+Frontend__AllowedOrigins__0=https://your-project.vercel.app
+```
+
+Then restart/redeploy the API.
+
+### 5. Final check
+
+Open the Vercel URL and test:
+
+```text
+login
+patient dashboard
+doctor dashboard
+admin dashboard
+chat
+booking
+```
+
+If login works but data requests fail, it is usually CORS or `VITE_API_BASE_URL`.
+
+If the API health check fails, open Render logs first.

@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: digiclinic-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: ConnectionStrings__DefaultConnection
+        fromDatabase:
+          name: digiclinic-db
+          property: connectionString
+      - key: Jwt__Key
+        generateValue: true
+      - key: Jwt__Issuer
+        value: DigiClinic.Api
+      - key: Jwt__Audience
+        value: DigiClinic.Client
+      - key: Jwt__ExpiresInMinutes
+        value: 120
+      - key: Frontend__AllowedOrigins__0
+        sync: false
+      - key: Telegram__Enabled
+        value: false
+
+databases:
+  - name: digiclinic-db
+    databaseName: digiclinic_db
+    user: digiclinic_user
+    plan: free
