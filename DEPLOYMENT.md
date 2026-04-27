@@ -65,7 +65,7 @@ If you do not want to use Blueprint for the frontend, create a separate Render S
 
 ```text
 Root Directory:    digiclinic/digi-clinic-client
-Build Command:     npm install && npm run build
+Build Command:     npm ci && npm run build
 Publish Directory: dist
 ```
 
@@ -113,8 +113,10 @@ Do not stage them with `git add .`.
 
 Stage only source and config files, for example:
 
+If `node_modules`, `dist`, `bin`, or `obj` were committed earlier, remove them from Git tracking once:
+
 ```powershell
-git add Dockerfile .dockerignore render.yaml DEPLOYMENT.md DigiClinicApi/DigiClinicApi/Program.cs
-git commit -m "Prepare Render deployment"
-git push origin main
+git rm -r --cached digiclinic/digi-clinic-client/node_modules digiclinic/digi-clinic-client/dist DigiClinicApi/DigiClinicApi/bin DigiClinicApi/DigiClinicApi/obj
 ```
+
+Then commit only source/config changes.

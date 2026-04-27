@@ -31,7 +31,7 @@ services:
   - type: web
     name: digiclinic-client
     runtime: static
-    buildCommand: cd digiclinic/digi-clinic-client && npm install && npm run build
+    buildCommand: cd digiclinic/digi-clinic-client && npm ci && npm run build
     staticPublishPath: ./digiclinic/digi-clinic-client/dist
     routes:
       - type: rewrite
