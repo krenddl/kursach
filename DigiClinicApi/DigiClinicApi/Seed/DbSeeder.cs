@@ -13,7 +13,7 @@ namespace DigiClinicApi.Seed
             var context = scope.ServiceProvider.GetRequiredService<ContextDb>();
 
             await SeedRoles(context);
-            await SeedSpecializations(context);
+            var specializations = await SeedSpecializations(context);
             var services = await SeedServices(context);
 
             var adminRole = await context.Roles.FirstAsync(x => x.Name == "Admin");
@@ -42,9 +42,9 @@ namespace DigiClinicApi.Seed
                 IsActive = true
             });
 
-            var cardiology = await context.Specializations.FirstAsync(x => x.Name == "Cardiologist");
-            var neurology = await context.Specializations.FirstAsync(x => x.Name == "Neurologist");
-            var dentistry = await context.Specializations.FirstAsync(x => x.Name == "Dentist");
+            var cardiology = specializations["Cardiologist"];
+            var neurology = specializations["Neurologist"];
+            var dentistry = specializations["Dentist"];
 
             var doctorUser1 = await EnsureUser(context, new User
             {
@@ -311,29 +311,63 @@ namespace DigiClinicApi.Seed
             await context.SaveChangesAsync();
         }
 
-        private static async Task SeedSpecializations(ContextDb context)
+        private static async Task<Dictionary<string, Specialization>> SeedSpecializations(ContextDb context)
         {
-            if (context.Specializations.Any()) return;
+            var catalog = new[]
+            {
+                new SpecializationSeedItem(
+                    "Cardiologist",
+                    "Кардиолог",
+                    new[] { "Cardiologist" },
+                    "Диагностика и лечение сердечно-сосудистых заболеваний"
+                ),
+                new SpecializationSeedItem(
+                    "Dentist",
+                    "Стоматолог",
+                    new[] { "Dentist" },
+                    "Лечение и профилактика заболеваний зубов"
+                ),
+                new SpecializationSeedItem(
+                    "Neurologist",
+                    "Невролог",
+                    new[] { "Neurologist" },
+                    "Диагностика и лечение заболеваний нервной системы"
+                )
+            };
 
-            context.Specializations.AddRange(
-                new Specialization
+            var specializations = new Dictionary<string, Specialization>(StringComparer.OrdinalIgnoreCase);
+
+            foreach (var item in catalog)
+            {
+                var aliases = item.Aliases
+                    .Append(item.Key)
+                    .Append(item.Name)
+                    .Distinct(StringComparer.OrdinalIgnoreCase)
+                    .ToList();
+
+                var existing = await context.Specializations
+                    .FirstOrDefaultAsync(x => aliases.Contains(x.Name));
+
+                if (existing == null)
                 {
-                    Name = "Cardiologist",
-                    Description = "Диагностика и лечение сердечно-сосудистых заболеваний"
-                },
-                new Specialization
-                {
-                    Name = "Dentist",
-                    Description = "Лечение и профилактика заболеваний зубов"
-                },
-                new Specialization
-                {
-                    Name = "Neurologist",
-                    Description = "Диагностика и лечение заболеваний нервной системы"
+                    existing = new Specialization
+                    {
+                        Name = item.Name,
+                        Description = item.Description
+                    };
+
+                    context.Specializations.Add(existing);
                 }
-            );
+                else if (string.IsNullOrWhiteSpace(existing.Description))
+                {
+                    existing.Description = item.Description;
+                }
+
+                specializations[item.Key] = existing;
+            }
 
             await context.SaveChangesAsync();
+            return specializations;
         }
 
         private static async Task<Dictionary<string, Service>> SeedServices(ContextDb context)
@@ -617,6 +651,13 @@ namespace DigiClinicApi.Seed
                 slot.Status = TimeSlotStatus.Available;
             }
         }
+
+        private sealed record SpecializationSeedItem(
+            string Key,
+            string Name,
+            string[] Aliases,
+            string Description
+        );
 
         private sealed record ServiceSeedItem(
             string Name,
