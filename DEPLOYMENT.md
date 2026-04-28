@@ -52,6 +52,7 @@ If Render gives the services different URLs, update these environment variables:
 ```text
 digiclinic-client:
 VITE_API_BASE_URL=https://your-api-url.onrender.com/api
+VITE_TELEGRAM_BOT_URL=https://t.me/your_bot_username
 
 digiclinic-api:
 Frontend__AllowedOrigins__0=https://your-client-url.onrender.com
@@ -73,6 +74,7 @@ Environment variable:
 
 ```text
 VITE_API_BASE_URL=https://your-api-url.onrender.com/api
+VITE_TELEGRAM_BOT_URL=https://t.me/your_bot_username
 ```
 
 Then add the frontend URL to API CORS:

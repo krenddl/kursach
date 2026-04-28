@@ -41,6 +41,7 @@ function buildInitialForm(profile) {
 
 export default function ProfilePage() {
   const { user } = useAuth();
+  const telegramBotUrl = import.meta.env.VITE_TELEGRAM_BOT_URL || "";
   const [profile, setProfile] = useState(null);
   const [form, setForm] = useState(buildInitialForm(null));
   const [specializations, setSpecializations] = useState([]);
@@ -261,6 +262,21 @@ export default function ProfilePage() {
               <div className="mt-2 text-[14px] leading-6 font-medium text-[#6F8278]">
                 Получите код и отправьте команду боту. Код действует 15 минут.
               </div>
+
+              {telegramBotUrl ? (
+                <a
+                  href={telegramBotUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-4 inline-flex w-full items-center justify-center rounded-[18px] bg-[#6FC17A] px-5 py-3 text-[15px] font-semibold text-white shadow-[0_12px_24px_rgba(111,193,122,0.22)] transition hover:bg-[#5FB06A]"
+                >
+                  Открыть Telegram-бота
+                </a>
+              ) : (
+                <div className="mt-4 rounded-[18px] border border-[#DCE9DE] bg-white px-4 py-3 text-sm font-semibold text-[#6F8278]">
+                  Ссылка на бота не настроена.
+                </div>
+              )}
 
               {telegramLink ? (
                 <div className="mt-4 rounded-[18px] border border-[#D5ECD9] bg-white p-4">

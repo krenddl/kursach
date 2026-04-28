@@ -40,6 +40,8 @@ services:
     envVars:
       - key: VITE_API_BASE_URL
         value: https://digiclinic-api.onrender.com/api
+      - key: VITE_TELEGRAM_BOT_URL
+        sync: false
 
 databases:
   - name: digiclinic-db
